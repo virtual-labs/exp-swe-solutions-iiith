@@ -1,39 +1,60 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the wave function (ψ) in quantum mechanics?",
+            "answers": {
+                "a": "A function that describes the shape of an electron's orbit.",
+                "b": "A function that gives the probability amplitude of a particle's position.",
+                "c": "A function that describes the energy levels of an atom.",
+                "d": "A function that gives the velocity of a particle."
+            },
+            "correctAnswer": "b",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. Solve the Schrödinger equation for a particle in a one-dimensional infinite potential well of width \\( L \\). What are the allowed energy levels?",
+            "answers": {
+                "a": "E_n = n^2 h^2 / 2mL^2",
+                "b": "E_n = n^2 π^2 ħ^2 / 2mL^2",
+                "c": "E_n = n ħ / 2mL",
+                "d": "E_n = n^2 h / mL^2"
+            },
+            "correctAnswer": "b",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Which of the following describes a finite potential well?",
+            "answers": {
+                "a": "A potential well with infinitely high walls.",
+                "b": "A potential well with finite energy outside the well.",
+                "c": "A potential that is zero everywhere.",
+                "d": "A potential well with finite depth and width."
+            },
+            "correctAnswer": "d",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. Calculate the probability of finding a particle in a specific region within an infinite potential well if the wave function is given by \\( \\psi(x) = \\sqrt{2/L} \\sin(n\\pi x/L) \\). Assume \\( n = 1 \\) and \\( L = 1 \\).",
+            "answers": {
+                "a": "1",
+                "b": "0.5",
+                "c": "0.75",
+                "d": "0.25"
+            },
+            "correctAnswer": "a",
+            "difficulty": "advanced"
+        },
+        {
+            "question": "5. What is the significance of the normalization condition in quantum mechanics?",
+            "answers": {
+                "a": "It ensures the wave function is real.",
+                "b": "It ensures the total probability of finding a particle is 1.",
+                "c": "It ensures the energy levels are quantized.",
+                "d": "It ensures the wave function is symmetric."
+            },
+            "correctAnswer": "b",
+            "difficulty": "beginner"
+        }
+    ]
 }

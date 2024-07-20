@@ -1,39 +1,60 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Explain the difference between an infinite potential well and a finite potential well.",
+            "answers": {
+                "a": "An infinite potential well has infinite energy levels, while a finite potential well has finite energy levels.",
+                "b": "An infinite potential well has infinitely high walls, while a finite potential well has walls with finite height.",
+                "c": "An infinite potential well has a continuous spectrum of energy, while a finite potential well has a discrete spectrum.",
+                "d": "An infinite potential well has zero probability of finding a particle outside the well, while a finite potential well has non-zero probability."
+            },
+            "correctAnswer": "b",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. For an electron in an infinite potential well of width \\( L \\), calculate the energy of the second excited state (n=3).",
+            "answers": {
+                "a": "E = 9π^2ħ^2 / 2mL^2",
+                "b": "E = 6π^2ħ^2 / mL^2",
+                "c": "E = 3πħ / mL",
+                "d": "E = 9πħ^2 / 2mL"
+            },
+            "correctAnswer": "a",
+            "difficulty": "advanced"
+        },
+        {
+            "question": "3. What does the square of the wave function (|ψ|^2) represent in the context of quantum mechanics?",
+            "answers": {
+                "a": "The velocity of the particle.",
+                "b": "The energy of the particle.",
+                "c": "The probability density of finding the particle at a given position.",
+                "d": "The force acting on the particle."
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4. Given the wave function \\( \\psi(x) = \\sqrt{2/L} \\sin(n\\pi x/L) \\) for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to L/4) for the ground state (n=1)?",
+            "answers": {
+                "a": "0.25",
+                "b": "0.5",
+                "c": "0.125",
+                "d": "0.75"
+            },
+            "correctAnswer": "c",
+            "difficulty": "advanced"
+        },
+        {
+            "question": "5. Why is the Schrödinger equation fundamental in quantum mechanics?",
+            "answers": {
+                "a": "It describes the energy levels of electrons in atoms.",
+                "b": "It governs the time evolution of a quantum system.",
+                "c": "It explains the wave-particle duality.",
+                "d": "It provides the basis for quantum field theory."
+            },
+            "correctAnswer": "b",
+            "difficulty": "intermediate"
+        }
+    ]
 }

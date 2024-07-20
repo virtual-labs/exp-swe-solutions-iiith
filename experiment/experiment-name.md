@@ -1,1 +1,1 @@
-## Experiment name
+## Introduce & explain other cases of inf, fin, and other swe solutions.
