@@ -242,132 +242,132 @@ function odd_wave(x, Vo, ok, okap, L) {
 
 function Visualize_FN() {
   
-  const L = 6;
-  const Vo = 8;
-  const m = 0.067 ;
-  const args = { width: L, depth: Vo };
-  const x = linspace(-2 * L / 2, 2 * L / 2, 400);
-  const U = U_sq(x, args.width, args.depth);
-  const theta0 = Math.sqrt(m * 9.31e-31 * Vo * L * L / (2 * (6.58e-16) ** 2 * 1e18 * 1.6e-19));
-  const n = parseInt(document.getElementById('w2').value);
-  const [etheta, otheta] = sqWellSol(theta0, 0.1);
-  const ek = etheta.map(e => e * 2 / L);
-  const ok = otheta.map(o => o * 2 / L);
-  const ekap = etheta.map(e => 2 * e / L * Math.tan(e));
-  const okap = otheta.map(o => Math.abs(2 * o / L * Math.tan(o)));
-  const e_eng = etheta.map(e => 2 * (1.05457173e-34) ** 2 * e ** 2 / (m * 9.31e-31 * (1.6e-19) * L * L * 1e-18));
-  const o_eng = otheta.map(o => 2 * (1.05457173e-34) ** 2 * o ** 2 / (m * 9.31e-31 * (1.6e-19) * L * L * 1e-18));
-
-  if(n > 5)
-      alert('Please enter values less than 6');
-
-  const datasets = [];
-  console.log("e_eng - ", e_eng);
-  console.log("o_eng - ", o_eng);
-  let evn = 0, not_evn = 0;
-  if(n % 2 == 1){
-    console.log("odd number");
-    not_evn = Math.floor(n/2);
-    evn = 0;
-  }
-  else{
-    console.log("odd number");
-
-    not_evn = 0;
-    evn = Math.floor(n/2);
-  }
-  for (let i = 0;   i < e_eng.length; i++) {
-      console.log("hi - ", i);
-      const psi_even = even_wave(x, Vo, ek[i], ekap[i], L);
-      const data = x.map((x_val, j) => ({x: x_val, y: psi_even[j] + e_eng[i]}));
-      datasets.push({
-          label: `E=${e_eng[i].toFixed(2)} eV (Even)`,
-          data: data,
-          borderColor: 'blue',
-          backgroundColor: 'transparent',
-          showLine: true,
-          pointRadius: 0
-      });
-  }
+    const L = 10;
+    const Vo = 1;
+    const m = 0.067;
+    const args = { width: L, depth: Vo };
+    const x = linspace(-2 * L / 2, 2 * L / 2, 400);
+    const U = U_sq(x, args.width, args.depth);
+    const theta0 = Math.sqrt(m * 9.31e-31 * Vo * L * L / (2 * (6.58e-16) ** 2 * 1e18 * 1.6e-19));
+    const n = parseInt(document.getElementById('w2').value);
+    const [etheta, otheta] = sqWellSol(theta0, 0.1);
+    const ek = etheta.map(e => e * 2 / L);
+    const ok = otheta.map(o => o * 2 / L);
+    const ekap = etheta.map(e => 2 * e / L * Math.tan(e));
+    const okap = otheta.map(o => Math.abs(2 * o / L * Math.tan(o)));
+    const e_eng = etheta.map(e => 2 * (1.05457173e-34) ** 2 * e ** 2 / (m * 9.31e-31 * (1.6e-19) * L * L * 1e-18));
+    const o_eng = otheta.map(o => 2 * (1.05457173e-34) ** 2 * o ** 2 / (m * 9.31e-31 * (1.6e-19) * L * L * 1e-18));
   
-  for (let i = 0;   i < o_eng.length; i++) {
-      const psi_odd = odd_wave(x, Vo, ok[i], okap[i], L);
-      const data = x.map((x_val, j) => ({x: x_val, y: psi_odd[j] + o_eng[i]}));
-      datasets.push({
-          label: `E=${o_eng[i].toFixed(2)} eV (Odd)`,
-          data: data,
-          borderColor: 'red',
-          backgroundColor: 'transparent',
-          showLine: true,
-          pointRadius: 0
-      });
-  }
-
-  const data = {
-      datasets: datasets
-  };
-  console.log('data: ', data);
-  console.log('data: ', data.datasets[0].data);
-
-  const ctx = document.getElementById('myChart2').getContext('2d');
-  if (window.myChart instanceof Chart) {
-      window.myChart.destroy();
-  }
-
-  window.myChart = new Chart(ctx, {
-      type: 'scatter',
-      data: data,
-      label: false,
-      options: {
-        plugins: {
-            legend: {
-                display: false // hide legend
-            },
-            tooltip: {
-                enabled: false // disable tooltips
-            }
-        },
-        scales: {
-            x: {
-                grid: {
-                    display: false // hide x-axis gridlines
-                },
-                ticks: {
-                    display: false // hide x-axis data values
-                },
-                title: {
-                    display: false,
-                    text: 'x'
-                },
-                border: {
-                  display: false
-                }
-            },
-            y: {
-                grid: {
-                    display: false // hide y-axis gridlines
-                },
-                ticks: {
-                    display: false // hide y-axis data values
-                },
-                title: {
-                    display: false,
-                    text: 'ψ(x)'
-                },
-                border: {
-                  display: false
-                }
-            }
-        },
-        responsive: true,
-        maintainAspectRatio: false
+    if(n > 5)
+        alert('Please enter values less than 6');
+  
+    const datasets = [];
+    console.log("e_eng - ", e_eng);
+    console.log("o_eng - ", o_eng);
+    let evn = 0, not_evn = 0;
+    if(n % 2 == 1){
+      console.log("odd number");
+      not_evn = Math.floor(n/2);
+      evn = 0;
     }
-  });
-  const topPercentage = 35 - n * 5; // Adjust the multiplier as needed
-  document.getElementById('myChart2').style.top = `${topPercentage}%`;
-  // document.getElementById('nextButton1').style.visibility = "visible"; // Adjust the multiplier as needed
-
-}
+    else{
+      console.log("odd number");
+  
+      not_evn = 0;
+      evn = Math.floor(n/2);
+    }
+    for (let i = not_evn;  n % 2 == 1 && i < not_evn+1; i++) {
+        console.log("hi - ", i);
+        const psi_even = even_wave(x, Vo, ek[i], ekap[i], L);
+        const data = x.map((x_val, j) => ({x: x_val, y: psi_even[j] + e_eng[i]}));
+        datasets.push({
+            label: `E=${e_eng[i].toFixed(2)} eV (Even)`,
+            data: data,
+            borderColor: 'blue',
+            backgroundColor: 'transparent',
+            showLine: true,
+            pointRadius: 0
+        });
+    }
+    
+    for (let i = evn-1;  n % 2 == 0 && i < evn; i++) {
+        const psi_odd = odd_wave(x, Vo, ok[i], okap[i], L);
+        const data = x.map((x_val, j) => ({x: x_val, y: psi_odd[j] + o_eng[i]}));
+        datasets.push({
+            label: `E=${o_eng[i].toFixed(2)} eV (Odd)`,
+            data: data,
+            borderColor: 'blue',
+            backgroundColor: 'transparent',
+            showLine: true,
+            pointRadius: 0
+        });
+    }
+  
+    const data = {
+        datasets: datasets
+    };
+    console.log('data: ', data);
+    console.log('data: ', data.datasets[0].data);
+  
+    const ctx = document.getElementById('myChart2').getContext('2d');
+    if (window.myChart instanceof Chart) {
+        window.myChart.destroy();
+    }
+  
+    window.myChart = new Chart(ctx, {
+        type: 'scatter',
+        data: data,
+        label: false,
+        options: {
+          plugins: {
+              legend: {
+                  display: false // hide legend
+              },
+              tooltip: {
+                  enabled: false // disable tooltips
+              }
+          },
+          scales: {
+              x: {
+                  grid: {
+                      display: false // hide x-axis gridlines
+                  },
+                  ticks: {
+                      display: false // hide x-axis data values
+                  },
+                  title: {
+                      display: false,
+                      text: 'x'
+                  },
+                  border: {
+                    display: false
+                  }
+              },
+              y: {
+                  grid: {
+                      display: false // hide y-axis gridlines
+                  },
+                  ticks: {
+                      display: false // hide y-axis data values
+                  },
+                  title: {
+                      display: false,
+                      text: 'ψ(x)'
+                  },
+                  border: {
+                    display: false
+                  }
+              }
+          },
+          responsive: true,
+          maintainAspectRatio: false
+      }
+    });
+    const topPercentage = 35 - n * 5; // Adjust the multiplier as needed
+    document.getElementById('myChart2').style.top = `${topPercentage}%`;
+    // document.getElementById('nextButton1').style.visibility = "visible"; // Adjust the multiplier as needed
+  
+  }
 
 
 function restart() {
