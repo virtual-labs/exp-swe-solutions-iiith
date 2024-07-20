@@ -1,13 +1,293 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 1</title>
+    
+
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquerymin.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"type="text/css">
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="iitstyle.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script language="javascript" type="text/javascript" src="t/excanvas.js"></script>
+    <script language="javascript" type="text/javascript" src="t/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="t/jquery.flot.js"></script>
+    <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+    var simsubscreennum=0;
+
+    var temp=0;
+
+</script>
+
+</head>
+
+<body style="margin-top: 40px; font-family: verdana;" >
+<table align="center">
+<tr><td>
+<div id="simscreen">
+
+    <div id="title"><h3><strong>Infinite and Finite Well and other SWE solutions</strong></h3></div>
+
+<!-- //////////////////////////////Scene 0 ///////////////////////-->
+<div class="simsubscreen" id="canvas0" style="visibility: visible; width: 700px;margin-right: 50px;margin-left: 50px;" ></br>
+
+    <div id="transis" style="
+        width: 700px;
+        height: 110px;
+        margin-right: 27px;
+        margin-left: 1px;
+        background-color: #ffffffc9;
+        border: 2px solid #0084ff;">
+    
+    <p class="incanvas" style="font-size:14px;"><strong>Objective:</strong></p>
+                <p class="incanvas" style="font-size:14px;">To demonstrate and explain the behavior of quantum particles in infinite and finite potential wells using graphical representations, and to explore various scenarios and solutions within quantum mechanics.
+
+                </p><br>
+                 
+<br><br><br>
+<p class="incanvas" style="font-size:15px; text-align: justify; position: absolute; color: rgb(10, 10, 133);left: 260px; top: 130px;"><strong><u>SOME FACTS:</u><br></strong><br>
+   (1) The time-independent Schrödinger equation, 
+ is fundamental in quantum mechanics. Understanding how to solve this equation for different potential functions 
+V(x) is essential for analyzing the behavior of particles in potential wells.
+    <br><br>(2) In both infinite and finite potential wells, particles occupy discrete energy levels. In an infinite well, these levels are given by 
+    𝐸𝑛= ​
+     . In a finite well, solving the Schrödinger equation with boundary conditions reveals a set of quantized energy levels, which are typically lower than those in an infinite well due to the possibility of tunneling.
+
+</div> 
+
+
+<!-- ////////////////////////////////////EQUIPMENT IMAGES AND STYLING/////////////////////// -->
+
+
+<img src="images/teacher.png"  id="stand_img" style=
+"   position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 495px;
+    width: 600px;
+"draggable="false"/>
+
+
+<!-- ///////////////////////////////////////EQUIPMENTS NAME STYLING/////////////////////////////////////// -->
+ 
+<!-- //////////////////////////////////START EXPERIMENT BUTTON//////////////////////////////////////////// -->
+ <!--Blinking arrowcubox  -->
+    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 535px; top: 500px; color: #2150a0;;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+<input type="button" id="nextButton0" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1a()"/>
+
+</div>
+
+
+<!-- ///////////////////////////Intro Page complete//////////////////////////////--> 
+
+  
+
+
+  
+
+ 
+<!-------------BACKGROUND IMAGE AND STYLE ------------->
+<div class="simsubscreen" id="canvas1" style="visibility: hidden; background: url(images/);" ></br>
+    <div id="btn_btn" style="width: 750px;
+        height: 41px;
+        margin-left: 23px;
+        position: absolute;
+        top: 26px;
+        border: 2px solid #1b1c1d;
+        font-size: 17px;
+        padding-top: 13px;
+        padding-left: 15px;
+        padding-top: 5px;
+        background-color: rgb(255, 255, 255, 0.6);">
+    <!--arrow1  -->
+<span class="blink_me" id="arw1" style="
+position: absolute;
+font-size: 30px;
+left: 631px;
+top: -2px;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+<input type="button" id="add_stand" style="position: absolute;
+left: 668px;
+top: 3px;
+cursor: pointer;
+font-size: 15px;
+padding: 3px;
+background-color: #2150a0;
+color: white;" value="&nbsp;Bring&nbsp;" onclick="add_stand()"/>
+
+<!--start analysis button  -->
+<input type="button" id="start_Analysis1" style="position:absolute; visibility: hidden; border-radius: 12px; left: 620px; top: 480px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Analysis&nbsp;" 
+value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
+
+<!-------Instruction lines  ------>
+<span id="s1_1" style="visibility: hidden ; position: absolute; left: 10px; top: 8px; font-size: 14px;">
+    <strong> Step-1: </strong> (a) Click on <u>Bring</u> button to display the structures  .</span>
+    <span id="s1_2" style="visibility: hidden ; position: absolute; left: 10px; top: 8px; font-size: 14px;">
+    <strong> Step-1: </strong> (a) Click over the structure to choose for analysis  .</span>
+    
+</div> 
+
+<!-- //////////////////////IMAGES IN ANIMATION//////////////////// -->
+
+
+<br><br><img src="images/1a.png"  id="specimen1" 
+style="position: absolute;
+    left: 600px;
+    top: 200px;
+    height: 320px;
+    width: 280px;
+    height: 120px;
+    visibility: hidden;
+    "draggable="false" onclick="navNext1a()"/>
+
+<img src="images/2a.png"  id="specimen2" style=
+"   position: absolute;
+    left: 500px;
+    top:200px;
+    width: 365px;
+    height: 120px;
+    visibility: hidden;
+"draggable="false" onclick="navNext1b()"/>
+
+
+<img src="images/3a.png"  id="specimen3" style=
+"   position: absolute;
+    left: 650px;
+    top: 200px;
+    width: 250px;
+    height: 105px;
+    visibility: hidden;
+"draggable="false" onclick="navNext1c()"/>
+
+<img src="images/4a.png"  id="specimen4" style=
+"   position: absolute;
+    left: 650px;
+    top: 500px;
+    height: 260px;
+    width: 260px;
+    visibility: hidden;
+"draggable="false" onclick="navNext1d()"/>
+
+<img src="images/5a.png"  id="specimen5" style=
+"   position: absolute;
+    left: 650px;
+    top: 500px;
+    height: 195px;
+    width: 190px;
+    visibility: hidden;
+"draggable="false" onclick="navNext1e()"/>
+
+<img src="images/6a.png"  id="specimen6" style=
+"   position: absolute;
+    left: 650px;
+    top: 500px;
+    height: 195px;
+    width: 190px;
+    visibility: hidden;
+"draggable="false" onclick="navNext1f()"/>
+
+
+
+ <!-- ////////////////////////////////START ANALYSIS BUTTON///////////////////////////////////////////// -->
+<!--Blinking arrowcubox  -->
+
+
+
+
+</div>
+
+<!-- /////////////////////ANIMATION END HERE//////////////////// -->
+
+<!-------------------FIXED END MOMENT-------------->
+ <!-------------PAGE-1 ------------->
+ <div class="simsubscreen" id="canvas1a" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
+
+    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-1------------->
+    
+    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
+    
+        <br> <br> <br> <br> <br>
+        
+    <body>
+        <img src="images/1.png"  id="addspecimen1" 
+        style="position: absolute;
+            left: 60px;
+            top: 500px;
+            height: 290px;
+            width: 400px;
+            visibility: hidden;
+            "draggable="false"/>
+        <span style="position: absolute; left: 60px; top: 10px; right: 100px; font-size:17px; "><strong>In an infinite potential well, the potential 
+
+            V(x) is zero inside the well and infinite outside, confining the particle strictly within a width 
+            L. And the probability of finding electrons at infinite potential is 0.</strong></span>
+
+        <button id="button50" style="position: absolute; left: 350px; top: 480px; width: 120px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="navNext1b()">Start Analysis</button>
+        <span class="blink_me" id="arw1" style="position: absolute;font-size: 30px;left: 315px; top: 474px;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+        
+
+    </div>
+</div>
+<div class="simsubscreen" id="canvas1b" style="visibility: hidden; background: url(images/); overflow: hidden;">
+    <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
+        <br> <br> <br> <br> <br>
+        <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case -1 Visualization of &psi;(x) in an Infinite Potential Well </u></strong></span>
+        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n</p>
+        <input type="text" id="w1" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;">
+        <button id="button1" style="position: absolute; left: 190px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_INF()">Visualize</button>
+        <div class="graph_inf">
+            <div class="image-container">
+                <img src="images/new inf pot.png" alt="Potential Well" class="background-image">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- <img src="images/2.png" id="addspecimen1b" style="position: absolute; left: 20px; top: 100px; height: 250px; width: 340px; visibility: hidden;" draggable="false" /> -->
+    <button class="fa fa-hand-o-right" id="nextButton1" style=" background-color: #2150a0; color: #FFF; position:absolute; left: 700px; height: 40px; width: 70px; top: 505px; font-size: 15px; visibility: hidden;" onclick="navNext1c()">Next</button>
+
+</div>
+
+<!-- JavaScript code to create the chart -->
+<div class="simsubscreen" id="canvas1c" style="visibility: hidden; background: url(images/); overflow: hidden;">
+    <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
+        <br> <br> <br> <br> <br>
+        <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case - 2 Visualization of &psi;(x) in a finite Potential Well </u></strong></span>
+        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n</p>
+        <input type="text" id="w2" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;">
+        <button id="button1" style="position: absolute; left: 190px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_FN()">Visualize</button>
+        <div class="graph_fn">
+            <div class="image-container2">
+                <img src="images/fn2.png" alt="Potential Well" class="background-image2" id = "fn_img">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </div>
+    <img src="images/2.png" id="addspecimen1b" style="position: absolute; left: 20px; top: 100px; height: 250px; width: 340px; visibility: hidden;" draggable="false" />
+    <button class="fa fa-hand-o-right" id="nextButton1" style=" background-color: #2150a0; color: #FFF; position:absolute; left: 700px; height: 40px; width: 70px; top: 505px; font-size: 15px; visibility: hidden;" onclick="navNext1c()">Next</button>
+
+</div>
+
+ <!-- //////////////////////////////JAWA SCRIPT END ///////////////////////-->
 </body>
 </html>
