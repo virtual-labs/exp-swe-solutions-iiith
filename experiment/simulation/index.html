@@ -255,6 +255,8 @@ style="position: absolute;
         <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case -1 Visualization of &psi;(x) in an Infinite Potential Well </u></strong></span>
         <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n</p>
         <input type="text" id="w1" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;">
+        <!-- <input type="text" id="length_inf" style="position: absolute; left: 190px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Length"> -->
+        
         <button id="button1" style="position: absolute; left: 190px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_INF()">Visualize</button>
         <div class="graph_inf">
             <div class="image-container">
@@ -273,20 +275,23 @@ style="position: absolute;
     <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
         <br> <br> <br> <br> <br>
         <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case - 2 Visualization of &psi;(x) in a finite Potential Well </u></strong></span>
-        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n</p>
-        <input type="text" id="w2" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;">
-        <button id="button1" style="position: absolute; left: 190px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_FN()">Visualize</button>
+        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n and Potential</p>
+        <input type="text" id="w2" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Value of n">
+        <input type="text" id="potential" style="position: absolute; left: 190px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Potential Value">
+        <input type="text" id="length" style="position: absolute; left: 350px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Length">
+
+        <button id="button1" style="position: absolute; left: 550px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_FN()">Visualize</button>
         <div class="graph_fn">
             <div class="image-container2">
-                <img src="images/fn2.png" alt="Potential Well" class="background-image2" id = "fn_img">
+                <img src="images/fn2.png" alt="Potential Well" class="background-image2" id="fn_img">
                 <canvas id="myChart2"></canvas>
             </div>
         </div>
     </div>
     <img src="images/2.png" id="addspecimen1b" style="position: absolute; left: 20px; top: 100px; height: 250px; width: 340px; visibility: hidden;" draggable="false" />
-    <button class="fa fa-hand-o-right" id="nextButton1" style=" background-color: #2150a0; color: #FFF; position:absolute; left: 700px; height: 40px; width: 70px; top: 505px; font-size: 15px; visibility: hidden;" onclick="navNext1c()">Next</button>
-
+    <button class="fa fa-hand-o-right" id="nextButton1" style="background-color: #2150a0; color: #FFF; position:absolute; left: 700px; height: 40px; width: 70px; top: 505px; font-size: 15px; visibility: hidden;" onclick="navNext1c()">Next</button>
 </div>
+
 
  <!-- //////////////////////////////JAWA SCRIPT END ///////////////////////-->
 </body>
