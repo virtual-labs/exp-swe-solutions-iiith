@@ -254,9 +254,9 @@ function Visualize_INF() {
     //     return;
     // }
    
-    const Vo = Math.min(parseInt(document.getElementById('potential').value), 8);
+    const Vo =document.getElementById('potential').value;
     const n = document.getElementById('w2').value;
-    const L = Math.max(10 - parseInt(document.getElementById('length').value), Math.ceil(n *1.5));
+    const L = document.getElementById('length').value;
     if(n > 5){
         alert('Please enter value of n less than 6');
         return;
