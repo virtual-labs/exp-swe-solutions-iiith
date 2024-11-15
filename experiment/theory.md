@@ -14,15 +14,16 @@ The wave equation describes the behavior of waves, including sound waves, light 
 
 The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass \( m \) in a potential \( V(x) \), the time-independent Schrödinger equation is:
 
-\[ -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + V(x)\psi = E\psi \]
+(ħ² / 2m) (d²ψ / dx²) + V(x)ψ = Eψ
 
-where \( \hbar \) is the reduced Planck's constant, \( \psi \) is the wave function, \( V(x) \) is the potential energy, and \( E \) is the energy of the system.
+
 
 ## Free Space
 
 In free space, where the potential \( V(x) = 0 \), the Schrödinger equation simplifies to:
 
-\[ \frac{d^2 \psi}{dx^2} + \frac{2mE}{\hbar^2} \psi = 0 \]
+` (d²ψ/dx²) + (2mE/ħ²)ψ = 0 `
+
 
 This equation has sinusoidal solutions, indicating that a free particle can have any energy and its wave function oscillates sinusoidally.
 
@@ -34,7 +35,10 @@ Consider an electron gun that emits electrons with a certain energy. These elect
 
 In an infinite potential well, the potential \( V(x) \) is zero inside the well and infinite outside. This creates boundary conditions that the wave function must be zero at the walls of the well. The solutions are standing waves, and the allowed energies are quantized:
 
-\[ E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2} \]
+$$
+E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}
+$$
+
 
 where \( L \) is the width of the well and \( n \) is a positive integer.
 
@@ -46,6 +50,9 @@ In a finite potential well, the potential \( V(x) \) is finite outside the well.
 
 The probability of finding a particle in a given region is determined by the integral of the probability density over that region. For a normalized wave function, the total probability over all space is 1:
 
-\[ \int_{-\infty}^{\infty} |\psi(x)|^2 \, dx = 1 \]
+$$
+\int_{-\infty}^{\infty} |\psi(x)|^2 \, dx = 1
+$$
+
 
 This normalization condition ensures that the particle exists somewhere in space.

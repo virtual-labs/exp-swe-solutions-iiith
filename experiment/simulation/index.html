@@ -50,7 +50,7 @@
     <div id="title"><h3><strong>Infinite and Finite Well and other SWE solutions</strong></h3></div>
 
 <!-- //////////////////////////////Scene 0 ///////////////////////-->
-<div class="simsubscreen" id="canvas0" style="visibility: visible; width: 700px;margin-right: 50px;margin-left: 50px;" ></br>
+<div class="simsubscreen" id="canvas0" style="visibility: visible; width: 700px;margin-right: 50px;margin-left: 50px; padding: 2px;" ></br>
 
     <div id="transis" style="
         width: 700px;
@@ -60,13 +60,13 @@
         background-color: #ffffffc9;
         border: 2px solid #0084ff;">
     
-    <p class="incanvas" style="font-size:14px;"><strong>Objective:</strong></p>
+    <p class="incanvas" style="font-size:14px; padding: 2px;"><strong>Objective:</strong></p>
                 <p class="incanvas" style="font-size:14px;">To demonstrate and explain the behavior of quantum particles in infinite and finite potential wells using graphical representations, and to explore various scenarios and solutions within quantum mechanics.
 
                 </p><br>
                  
 <br><br><br>
-<p class="incanvas" style="font-size:15px; text-align: justify; position: absolute; color: rgb(10, 10, 133);left: 260px; top: 130px;"><strong><u>SOME FACTS:</u><br></strong><br>
+<p class="incanvas" style="font-size:15px; text-align: justify; position: absolute; color: rgb(10, 10, 133);left: 260px; top: 130px; padding: 2px; margin-right: 3px;"><strong><u>SOME FACTS:</u><br></strong><br>
    (1) The time-independent Schrödinger equation, 
  is fundamental in quantum mechanics. Understanding how to solve this equation for different potential functions 
 V(x) is essential for analyzing the behavior of particles in potential wells.
@@ -93,8 +93,8 @@ V(x) is essential for analyzing the behavior of particles in potential wells.
  
 <!-- //////////////////////////////////START EXPERIMENT BUTTON//////////////////////////////////////////// -->
  <!--Blinking arrowcubox  -->
-    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 535px; top: 500px; color: #2150a0;;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-<input type="button" id="nextButton0" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1a()"/>
+    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px;left: 535px; top: 500px; color: #2150a0;margin-right: 5px;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+<input type="button" id="nextButton0" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-right: 5px;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1a()"/>
 
 </div>
 
@@ -252,10 +252,34 @@ style="position: absolute;
 <div class="simsubscreen" id="canvas1b" style="visibility: hidden; background: url(images/); overflow: hidden;">
     <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
         <br> <br> <br> <br> <br>
-        <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case -1 Visualization of &psi;(x) in an Infinite Potential Well </u></strong></span>
-        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n</p>
-        <input type="text" id="w1" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;">
+        <span style="position: absolute; left: 30px; top: 10px; font-size:17px;">
+            <strong><u>Case -1 Visualization of &psi;(x) in an Infinite Potential Well </u></strong>
+        </span>
+        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">
+            Input the value of n
+        </p>
+        <input type="text" id="w1" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" oninput="validateInput()">
+        <script>
+            function validateInput() {
+                const input = document.getElementById('w1');
+                const value = input.value;
+        
+                // Check if the input is zero
+                if (value == 0) {
+                    alert('Not a valid quantum state');
+                    input.value = ''; // Clear the input field
+                    return; // Stop further execution
+                }
+        
+                // Check if input is a valid positive integer
+                if (!/^\d+$/.test(value)) {
+                    input.value = ''; // Clear the input field
+                    alert('Please enter a non-negative integer');
+                }
+            }
+        </script>
         <button id="button1" style="position: absolute; left: 190px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_INF()">Visualize</button>
+        
         <div class="graph_inf">
             <div class="image-container">
                 <img src="images/new inf pot.png" alt="Potential Well" class="background-image">
