@@ -4,22 +4,34 @@
         {
             "question": "1. What is the wave function (ψ) in quantum mechanics?",
             "answers": {
-                "a": "A function that describes the shape of an electron's orbit.",
-                "b": "A function that gives the probability amplitude of a particle's position.",
+                "a": "A function that describes the shape of an electron's location.",
+                "b": "A function that gives the probability of finding the particle.",
                 "c": "A function that describes the energy levels of an atom.",
                 "d": "A function that gives the velocity of a particle."
             },
+            "explanations": {
+                "a": "No, Can we know exact location of the electron??",
+                "b": "Correct",
+                "c": "No, wavefunction does not define the energy alone.",
+                "d": "Nope, go back to theory."
+              },
             "correctAnswer": "b",
             "difficulty": "beginner"
         },
         {
-            "question": "2. Solve the Schrödinger equation for a particle in a one-dimensional infinite potential well of width \\( L \\). What are the allowed energy levels?",
+            "question": "2.What are the allowed energy levels in solution of  for a particle in a one-dimensional infinite potential well of width \\( L \\). What are the allowed energy levels?",
             "answers": {
                 "a": "E_n = n^2 h^2 / 2mL^2",
                 "b": "E_n = n^2 π^2 ħ^2 / 2mL^2",
                 "c": "E_n = n ħ / 2mL",
                 "d": "E_n = n^2 h / mL^2"
             },
+            "explanations": {
+                "a": "See the equation in the theory",
+                "b": "Correct",
+                "c": "See the equation in the theory",
+                "d": "See the equation in the theory"
+              },
             "correctAnswer": "b",
             "difficulty": "intermediate"
         },
@@ -31,29 +43,66 @@
                 "c": "A potential that is zero everywhere.",
                 "d": "A potential well with finite depth and width."
             },
-            "correctAnswer": "d",
+            "explanations": {
+                "a": "No, thats an infinite potential well.",
+                "b": "Correct",
+                "c": "No, Shouldn’t then particle be like free energy particle?",
+                "d": "Not necessarily"
+              },
+            "correctAnswer": "b",
             "difficulty": "intermediate"
         },
         {
-            "question": "4. Calculate the probability of finding a particle in a specific region within an infinite potential well if the wave function is given by \\( \\psi(x) = \\sqrt{2/L} \\sin(n\\pi x/L) \\). Assume \\( n = 1 \\) and \\( L = 1 \\).",
+            "question": "4. Calculate the probability of finding a particle in a specific region within an infinite potential well if the wave function is given by \\( \\psi(x) = \\sqrt{\\frac{2}{L}} \\sin\\left(\\frac{n\\pi x}{L}\\right) \\). Assume \\( n = 1 \\) and \\( L = 1 \\).",
             "answers": {
-                "a": "1",
-                "b": "0.5",
-                "c": "0.75",
-                "d": "0.25"
+              "a": "1",
+              "b": "0.5",
+              "c": "0.75",
+              "d": "0.25"
+            },
+            "explanations": {
+              "a": "True, particle has to exist within the given limits",
+              "b": "No, where will particle exist?",
+              "c": "No, where will particle exist?",
+              "d": "No, where will particle exist?"
             },
             "correctAnswer": "a",
             "difficulty": "advanced"
-        },
+          },
+          
         {
-            "question": "5. What is the significance of the normalization condition in quantum mechanics?",
+            "question": "5. In a system which is invert of 1D finite potential well (i.e. system potential barrier V(x) exists, between x=0 and x=L and particle is free in d: 0.25 all other regions (x<0 and x>L). If particle is located in x<0 and moving towards x=0, what will be characteristics of SWE solution (wavefunction) is the barrier and in the free space?",
             "answers": {
-                "a": "It ensures the wave function is real.",
-                "b": "It ensures the total probability of finding a particle is 1.",
-                "c": "It ensures the energy levels are quantized.",
-                "d": "It ensures the wave function is symmetric."
+                "a": "Particle has a sinusoidal wave function every where",
+                "b": "Particle has a decaying wave function everywhere",
+                "c": "Particle cannot exist in this system",
+                "d": "Particle wavefunction is sinusoidal in x<=0 and x>=L and decays exponentially 0<x<L"
             },
-            "correctAnswer": "b",
+            "explanations": {
+                "a": "When E<V(x), solution is not sinusoidal",
+                "b": "Wave function cannot be decaying in free space",
+                "c": "No, recall boundary conditions",
+                "d": "Yes, this is called tunneling. particle is found on other side of the barrier with lower probability."
+              },
+            "correctAnswer": "d",
+            "difficulty": "beginner"
+        },
+          
+        {
+            "question": "6. For above system, which of the following will be true?",
+            "answers": {
+                "a": "Particle wave function should be zero for x>= L",
+                "b": "Particle wave function amplitude will increase for x>=L",
+                "c": "Particle will bounce back completely at x=0",
+                "d": "Larger the value of L, lower is the amplitude of wavfunction for x>=L"
+            },
+            "explanations": {
+                "a": "No, recall boundary conditions",
+                "b": "No revisit theory",
+                "c": "No, paritcle won’t bounce back with 100% probability.",
+                "d": "Yes, wider barrier L implies more decay in the barrier."
+              },
+            "correctAnswer": "d",
             "difficulty": "beginner"
         }
     ]

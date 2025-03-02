@@ -1,3 +1,3 @@
 # Aim
 
-To visualize the wavefunctions for different values of the quantum number \( n \) for both finite and infinite potential wells.
+This lab introduces the Schordinger wave equation (SWE) and solution of SWE for special cases of free space,infinite potential well and finite potential well
