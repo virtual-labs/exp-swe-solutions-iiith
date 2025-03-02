@@ -1,1 +1,1 @@
-## Introduce & explain other cases of inf, fin, and other swe solutions.
+## Schordinger Wave Equation and Infinite and Finite potential well

@@ -1,14 +1,8 @@
 # Theory
 
 ## Wave Equation
-
-The wave equation describes the behavior of waves, including sound waves, light waves, and quantum mechanical waves. In quantum mechanics, the wave equation is known as the Schrödinger equation, which determines the allowed energy levels of a quantum system and the probability of finding a particle in a given state.
-
-## Parameters
-
-- **Wave function (ψ):** Describes the quantum state of a particle and contains all the information about the system.
-- **Probability density (|ψ|^2):** The probability of finding a particle in a particular location, given by the square of the wave function's magnitude.
-- **Quantum number (n):** Determines the energy level and the shape of the wavefunction.
+In quantum mechanics, a small particle like elctron, is known to exist both as a particle and as a wave(wave particle duality).
+The wave equation describes the movement of energy and is expressed in form of amplitude or energy with respect to location and time In quantum mechanics, the wave equation is known as the Schrödinger equation, which represents the probability of finding the particles in space.
 
 ## Schrödinger Wave Equation
 
@@ -16,24 +10,38 @@ The Schrödinger equation is a fundamental equation in quantum mechanics that de
 
 (ħ² / 2m) (d²ψ / dx²) + V(x)ψ = Eψ
 
+## Key definations
+
+- **Wave function (ψ):** Describes the behavior of the particle system (or particle wave) and all the system variables defining it. \phi is an expression of
+location (x, y, z in 3D) and time (t).
+- **Probability density (\psi*\psi):** It is the conjugate product of the wave function, gives the probability of finding the particle
+- **Quantization:** The solution of SWE, \phi, for a given bounded system exists only for specific values of Energy and \phi. Thus, the Energy and Wavefunction are
+`quantized’. Number representing its quantized state is called the ‘Quantum number’ usually denoted by ’n’.
+-**E :** represents the energy of the particle in the system.
+-**V(x,y,z)** is the system potential in 3 dimension.
+
+
+
 
 
 ## Free Space
 
-In free space, where the potential \( V(x) = 0 \), the Schrödinger equation simplifies to:
+In free space,particle is free to move around in space as particle energy is much higher than system potential.
+Consider the simple 1D case, where particle exits freely and system potential V(x) =0
 
 ` (d²ψ/dx²) + (2mE/ħ²)ψ = 0 `
 
 
-This equation has sinusoidal solutions, indicating that a free particle can have any energy and its wave function oscillates sinusoidally.
+the solution to this SWE is given by equation 4 which is simplified to equation 5. With system boundary conditions,
+we see that the qunatized wave solution to this is represented by equation 6 and allowed energy levels by equation7
 
-## Electron Gun Example
+Free Space  Example :Electron gun 
 
-Consider an electron gun that emits electrons with a certain energy. These electrons can be described by a wave function, and their behavior can be analyzed using the Schrödinger equation. In a region with no potential (free space), the electrons will exhibit wave-like properties.
+Consider an electron gun that emits electrons with a certain energy, These electrons can be described by a wave function, and their behavior can be analyzed using the Schrödinger equation. In a region with no potential (free space), away from the influence source of Gun & before they get under the potential the anode, the electrons will exhibit wave-like properties.
 
 ## Infinite Potential Well
 
-In an infinite potential well, the potential \( V(x) \) is zero inside the well and infinite outside. This creates boundary conditions that the wave function must be zero at the walls of the well. The solutions are standing waves, and the allowed energies are quantized:
+In an infinite potential well, the system potential \( V(x) \) is zero inside the well (similar to free space), but, infinite at and outside the well walls. This creates boundary conditions : the wave function is zero and outside beyond the walls of the well. The solution in the well is sinusoidal (equation 5) given in standing waves(like flute), and with quantized solution modes (equation 6) and with allowed energy level as shown in equation 7:
 
 $$
 E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}
@@ -41,18 +49,10 @@ $$
 
 
 where \( L \) is the width of the well and \( n \) is a positive integer.
+![](./images/equation.png)
 
 ## Finite Potential Well
+Finite potential well is potential well where the well boundaries are defined by potential greater than particle energy but finite.
+Inside the well, we again assume zero potential (like in Infinite potential well) and finitie value V(x) at the boundary and beyond.
+ The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equation 8: note exponent is a real number). The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
 
-In a finite potential well, the potential \( V(x) \) is finite outside the well. The wave function inside the well is similar to that of the infinite well, but outside the well, the wave function decays exponentially. The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
-
-## Probability of Finding a Particle
-
-The probability of finding a particle in a given region is determined by the integral of the probability density over that region. For a normalized wave function, the total probability over all space is 1:
-
-$$
-\int_{-\infty}^{\infty} |\psi(x)|^2 \, dx = 1
-$$
-
-
-This normalization condition ensures that the particle exists somewhere in space.
