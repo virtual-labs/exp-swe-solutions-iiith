@@ -1417,25 +1417,27 @@ font-size: 20px;
 }
 
 .image-container {
-	top: 50%;
-	left: 3%;
+	top: 100%;
+	left: 17%;
+	
     position: relative;
-    width: 220px; /* Adjust to the width of your image */
-    height: 160px; /* Adjust to the height of your image */
+    width: 165px; /* Adjust to the width of your image */
+    height: 140px; /* Adjust to the height of your image */
 }
 
 .background-image {
-    width: 295%;
-    height: 220%;
+    width: 496px;
+    height: 336px;
     /* display: block; */
 }
 
 #myChart {
     position: absolute;
-    left: 95.5%; /* Adjust to position the chart horizontally within Region II */
+    left: 98%; /* Adjust to position the chart horizontally within Region II */
     top: 100%;  /* Adjust to position the chart vertically within Region II */
-    width: 0%; /* Adjust to match the width of Region II */
-    height: 0%; /* Adjust to match the height of Region II */
+	width: 100%;
+ /* Adjust to match the width of Region II */
+    height: 240%; /* Adjust to match the height of Region II */
 }
 
 .graph_fn {
@@ -1446,8 +1448,8 @@ font-size: 20px;
 }
 
 .image-container2 {
-	top: 120%;
-	left: 17%;
+    top: 120%;
+    left: 17%;
     position: relative;
     width: 320px; /* Adjust to the width of your image */
     height: 240px; /* Adjust to the height of your image */
@@ -1459,12 +1461,11 @@ font-size: 20px;
     /* display: block; */
 }
 
-
-
 #myChart2 {
     position: absolute;
-    left: 26.5%; /* Adjust to position the chart horizontally within Region II */
+    left: 26%; /* Adjust to position the chart horizontally within Region II */
     top: 30%;  /* Adjust to position the chart vertically within Region II */
-    width: 100%; /* Adjust to match the width of Region II */
-    height:100%; /* Adjust to match the height of Region II */
+    width: 100%; /* Use 100% width of parent container */
+    height: 100%; /* Use 100% height of parent container */
+    /* Optional: Adjust max width/height if needed */
 }
