@@ -13,7 +13,7 @@
             "difficulty": "intermediate"
         },
         {
-            "question": "2. For an electron in an infinite potential well of width \\( L \\), calculate the energy of the second excited state (n=3).",
+            "question": "2. For an electron in an infinite potential well of width ( L ), calculate the energy of the second excited state (n=3).",
             "answers": {
                 "a": "E = 9π^2ħ^2 / 2mL^2",
                 "b": "E = 6π^2ħ^2 / mL^2",
@@ -35,7 +35,7 @@
             "difficulty": "beginner"
         },
         {
-            "question": "4. Given the wave function \\( \\psi(x) = \\sqrt{2/L} \\sin(n\\pi x/L) \\) for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to L/4) for the ground state (n=1)?",
+            "question": "4. Given the wave function \\psi(x) = \\sqrt{2/L} \\sin(n\\pi x/L) for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to L/4) for the ground state (n=1)?",
             "answers": {
                 "a": "0.25",
                 "b": "0.5",
@@ -45,15 +45,16 @@
             "correctAnswer": "c",
             "difficulty": "advanced"
         },
+        
         {
-            "question": "5. Why is the Schrödinger equation fundamental in quantum mechanics?",
+            "question": "5. Which of these cannot be best explained using SWE ?",
             "answers": {
-                "a": "It describes the energy levels of electrons in atoms.",
-                "b": "It governs the time evolution of a quantum system.",
-                "c": "It explains the wave-particle duality.",
-                "d": "It provides the basis for quantum field theory."
+                "a": "Electron cloud around atoms.",
+                "b": "Hole moving in silicon lattice",
+                "c": "Quantum dot",
+                "d": "motion of planets around star"
             },
-            "correctAnswer": "b",
+            "correctAnswer": "d",
             "difficulty": "intermediate"
         }
     ]
