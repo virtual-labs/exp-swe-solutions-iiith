@@ -8,13 +8,9 @@ function Visualize_INF() {
         alert("Please enter a valid number for n.");
         return;
     }
-    else if (!/^\d+$/.test(n)) {
-        // If it's not a valid non-negative integer, show an alert
-        alert("Please enter a non-negative integer.");
-        return;
-    } 
+  
     
- else if(n > 5){
+  if(n > 5){
     alert('Please enter value less than 6');
     return;
   }
@@ -253,30 +249,14 @@ function Visualize_INF() {
     //     console.error("Missing input elements.");
     //     return;
     // }
-   
-    const Vo =document.getElementById('potential').value;
-    const n = document.getElementById('w2').value;
-    const L = document.getElementById('length').value;
-    if(n > 5){
-        alert('Please enter value of n less than 6');
-        return;
-    }
+    const Vo = Math.min(parseInt(document.getElementById('potential').value), 8);
+    const n = parseInt(document.getElementById('w2').value);
+    const L = Math.max(10 - parseInt(document.getElementById('length').value), Math.ceil(n *1.5));
+  
     
-    if(L >= 10){
-        alert('Please enter value of length less than 10');
-        return;
-    }
-    
-    if(Vo >= 10){
-        alert('Please enter value of potential less than 10');
-        return;
-    }
-   if (!/^\d+$/.test(n)) {
-        // If it's not a valid non-negative integer, show an alert
-        alert("Please enter a non-negative integer.");
-        return;
-    } 
-
+  
+  
+  
     const m = 0.067;
     const args = { width: L, depth: Vo };
     const x = linspace(-2 * L / 2, 2 * L / 2, 400);
@@ -290,7 +270,20 @@ function Visualize_INF() {
     const e_eng = etheta.map(e => 2 * (1.05457173e-34) ** 2 * e ** 2 / (m * 9.31e-31 * (1.6e-19) * L * L * 1e-18));
     const o_eng = otheta.map(o => 2 * (1.05457173e-34) ** 2 * o ** 2 / (m * 9.31e-31 * (1.6e-19) * L * L * 1e-18));
   
+  if(n > 5){
+      alert('Please enter value less than 6');
+      return;
+  }
   
+  if(L >= 10){
+      alert('Please enter value less than 10');
+      return;
+  }
+  
+  if(Vo >= 10){
+      alert('Please enter value less than 10');
+      return;
+  }
   
   const datasets = [];
   console.log("e_eng - ", e_eng);
@@ -363,8 +356,6 @@ function Visualize_INF() {
         },
         scales: {
             x: {
-                min: -L,
-                max: L,
                 grid: {
                     display: false // hide x-axis gridlines
                 },
