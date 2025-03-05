@@ -4,9 +4,7 @@ The wave equation describes the movement of energy and is expressed in form of a
 
 ## Schrödinger Wave Equation
 The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass \( m \) in a potential \( V(x) \), the time-independent Schrödinger equation is:
-
-(ħ² / 2m) (d²ψ / dx²) + V(x)ψ = Eψ
-
+![](./images/eq1.png)
 ## Key definations
 
 - **Wave function (ψ):** Describes the behavior of the particle system (or particle wave) and all the system variables defining it. \phi is an expression of
@@ -52,11 +50,5 @@ where \( L \) is the width of the well and \( n \) is a positive integer.
 Finite potential well is potential well where the well boundaries are defined by potential greater than particle energy but finite.
 Inside the well, we again assume zero potential (like in Infinite potential well) and finitie value V(x) at the boundary and beyond.
  The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equation 8: note exponent is a real number). The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
-
-The wave function must satisfy the normalization condition:
-
-\[
-\int_{-\infty}^{\infty} |\psi(x)|^2 \, dx = 1
-\]
 
 This normalization condition ensures that the particle exists somewhere in space.
