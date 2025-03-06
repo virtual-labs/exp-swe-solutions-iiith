@@ -45,8 +45,9 @@ In an infinite potential well, the system potential  V(x)  is zero inside the we
 ![](./images/eq3.png)
 
 where  L  is the width of the well and  n is a positive integer.
-<!-- ![](./images/equation.png) -->
-<img src="./images/equation.png" width="400">
+![](./images/equation.png)
+<!-- <img src="./images/equation.png" width="400"> -->
+
 ## Finite Potential Well
 Finite potential well is potential well where the well boundaries are defined by potential greater than particle energy but finite.
 Inside the well, we again assume zero potential (like in Infinite potential well) and finitie value V(x) at the boundary and beyond.
