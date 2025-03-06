@@ -45,11 +45,11 @@ In an infinite potential well, the system potential  V(x)  is zero inside the we
 ![](./images/eq3.png)
 
 where  L  is the width of the well and  n is a positive integer.
-![](./images/equation.png)
-
+<!-- ![](./images/equation.png) -->
+<img src="./images/equation.png" width="400">
 ## Finite Potential Well
 Finite potential well is potential well where the well boundaries are defined by potential greater than particle energy but finite.
 Inside the well, we again assume zero potential (like in Infinite potential well) and finitie value V(x) at the boundary and beyond.
- The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equation 8: note exponent is a real number). The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
+ The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially . The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
 
 This normalization condition ensures that the particle exists somewhere in space.
