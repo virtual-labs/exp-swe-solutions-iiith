@@ -34,8 +34,9 @@
             "correctAnswer": "c",
             "difficulty": "beginner"
         },
-        {
-            "question": "4. Given the wave function \\psi(x) = \\sqrt{2/L} \\sin(n\\pi x/L) for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to L/4) for the ground state (n=1)?",
+        
+            {
+  "question": "4. Given the wave function $\\psi(x) = \\sqrt{2/L} \\sin\\left(\\frac{n\\pi x}{L}\\right)$ for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to $L/4$) for the ground state ($n=1$)?",
             "answers": {
                 "a": "0.25",
                 "b": "0.5",
