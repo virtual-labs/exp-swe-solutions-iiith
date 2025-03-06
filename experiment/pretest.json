@@ -19,13 +19,14 @@
             "difficulty": "beginner"
         },
         {
-            "question": "2.What are the allowed energy levels in solution of  for a particle in a one-dimensional infinite potential well of width \\( L \\). What are the allowed energy levels?",
-            "answers": {
-                "a": "E_n = n^2 h^2 / 2mL^2",
-                "b": "E_n = n^2 π^2 ħ^2 / 2mL^2",
-                "c": "E_n = n ħ / 2mL",
-                "d": "E_n = n^2 h / mL^2"
-            },
+          "question": "2. What are the allowed energy levels in the solution for a particle in a one-dimensional infinite potential well of width $L$? What are the allowed energy levels?",
+          "answers": {
+            "a": "$E_n = \\frac{n^2 h^2}{2mL^2}$",
+            "b": "$E_n = \\frac{n^2 \\pi^2 \\hbar^2}{2mL^2}$",
+            "c": "$E_n = \\frac{n \\hbar}{2mL}$",
+            "d": "$E_n = \\frac{n^2 h}{mL^2}$"
+          },
+        
             "explanations": {
                 "a": "See the equation in the theory",
                 "b": "Correct",
@@ -53,13 +54,14 @@
             "difficulty": "intermediate"
         },
         {
-            "question": "4. Calculate the probability of finding a particle in a specific region within an infinite potential well if the wave function is given by \\( \\psi(x) = \\sqrt{\\frac{2}{L}} \\sin\\left(\\frac{n\\pi x}{L}\\right) \\). Assume \\( n = 1 \\) and \\( L = 1 \\).",
-            "answers": {
-              "a": "1",
-              "b": "0.5",
-              "c": "0.75",
-              "d": "0.25"
-            },
+          "question": "4. Calculate the probability of finding a particle in a specific region within an infinite potential well if the wave function is given by $\\psi(x) = \\sqrt{\\frac{2}{L}} \\sin\\left(\\frac{n\\pi x}{L}\\right)$. Assume $n = 1$ and $L = 1$.",
+          "answers": {
+            "a": "$1$",
+            "b": "$0.5$",
+            "c": "$0.75$",
+            "d": "$0.25$"
+          },
+        
             "explanations": {
               "a": "True, particle has to exist within the given limits",
               "b": "No, where will particle exist?",
