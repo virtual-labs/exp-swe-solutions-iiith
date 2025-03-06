@@ -10,10 +10,10 @@ function Visualize_INF() {
     }
   
     
-//   if(n > 5){
-//     alert('Please enter value less than 6');
-//     return;
-//   }
+  if(n > 5){
+    alert('Please enter value less than 6');
+    return;
+  }
   
     // Set the visibility of the graph text
     // document.getElementById("text4").style.visibility = "visible";
