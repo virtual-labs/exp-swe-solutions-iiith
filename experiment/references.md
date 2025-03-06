@@ -1,1 +1,2 @@
-### Link your references in here
+### 
+[Shrodinger wave equation](https://physics.uwo.ca/~mhoude2/courses/phy2102/Ch5-Schrodinger_Equation.pdf)

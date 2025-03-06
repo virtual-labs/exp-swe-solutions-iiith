@@ -3,13 +3,15 @@ In quantum mechanics, a small particle like elctron, is known to exist both as a
 The wave equation describes the movement of energy and is expressed in form of amplitude or energy with respect to location and time In quantum mechanics, the wave equation is known as the Schrödinger equation, which represents the probability of finding the particles in space.
 
 ## Schrödinger Wave Equation
-The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass \( m \) in a potential \( V(x) \), the time-independent Schrödinger equation is:
-![](./images/eq1.png)
-## Key definations
+The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass  m  in a potential V(x) , the time-independent Schrödinger equation is:
+<img src="./images/eq1.png" width="400">
+
+
+## Key definitions
 
 - **Wave function (ψ):** Describes the behavior of the particle system (or particle wave) and all the system variables defining it. \phi is an expression of
 location (x, y, z in 3D) and time (t).
-- **Probability density (\psi*\psi):** It is the conjugate product of the wave function, gives the probability of finding the particle
+- **Probability density (ψ*ψ):** It is the conjugate product of the wave function, gives the probability of finding the particle
 - **Quantization:** The solution of SWE, \phi, for a given bounded system exists only for specific values of Energy and \phi. Thus, the Energy and Wavefunction are
 `quantized’. Number representing its quantized state is called the ‘Quantum number’ usually denoted by ’n’.
 -**E :** represents the energy of the particle in the system.
@@ -24,7 +26,7 @@ location (x, y, z in 3D) and time (t).
 In free space,particle is free to move around in space as particle energy is much higher than system potential.
 Consider the simple 1D case, where particle exits freely and system potential V(x) =0
 
-` (d²ψ/dx²) + (2mE/ħ²)ψ = 0 `
+![](./images/eq2.png)
 
 
 the solution to this SWE is given by equation 4 which is simplified to equation 5. With system boundary conditions,
