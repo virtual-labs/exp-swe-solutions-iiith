@@ -13,13 +13,13 @@
             "difficulty": "intermediate"
         },
         {
-            "question": "2. For an electron in an infinite potential well of width ( L ), calculate the energy of the second excited state (n=3).",
+            "question": "2. For an electron in an infinite potential well of width $L$, calculate the energy of the second excited state ($n=3$).",
             "answers": {
-                "a": "E = 9π^2ħ^2 / 2mL^2",
-                "b": "E = 6π^2ħ^2 / mL^2",
-                "c": "E = 3πħ / mL",
-                "d": "E = 9πħ^2 / 2mL"
-            },
+              "a": "$E = \\frac{9\\pi^2\\hbar^2}{2mL^2}$",
+              "b": "$E = \\frac{6\\pi^2\\hbar^2}{mL^2}$",
+              "c": "$E = \\frac{3\\pi\\hbar}{mL}$",
+              "d": "$E = \\frac{9\\pi\\hbar^2}{2mL}$"
+            },          
             "correctAnswer": "a",
             "difficulty": "advanced"
         },
