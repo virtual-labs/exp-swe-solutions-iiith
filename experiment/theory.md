@@ -4,7 +4,9 @@ The wave equation describes the movement of energy and is expressed in form of a
 
 ## Schrödinger Wave Equation
 The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass  m  in a potential V(x) , the time-independent Schrödinger equation is:
-<img src="./images/eq1.png" width="400">
+
+
+<img src="./images/eq1.png" width="300" >
 
 
 ## Key definitions
@@ -12,7 +14,7 @@ The Schrödinger equation is a fundamental equation in quantum mechanics that de
 - **Wave function (ψ):** Describes the behavior of the particle system (or particle wave) and all the system variables defining it. \phi is an expression of
 location (x, y, z in 3D) and time (t).
 - **Probability density (ψ*ψ):** It is the conjugate product of the wave function, gives the probability of finding the particle
-- **Quantization:** The solution of SWE, \phi, for a given bounded system exists only for specific values of Energy and \phi. Thus, the Energy and Wavefunction are
+- **Quantization:** The solution of SWE, ψ, for a given bounded system exists only for specific values of Energy and ψ. Thus, the Energy and Wavefunction are
 `quantized’. Number representing its quantized state is called the ‘Quantum number’ usually denoted by ’n’.
 -**E :** represents the energy of the particle in the system.
 -**V(x,y,z)** is the system potential in 3 dimension.
@@ -38,14 +40,11 @@ Consider an electron gun that emits electrons with a certain energy, These elect
 
 ## Infinite Potential Well
 
-In an infinite potential well, the system potential \( V(x) \) is zero inside the well (similar to free space), but, infinite at and outside the well walls. This creates boundary conditions : the wave function is zero and outside beyond the walls of the well. The solution in the well is sinusoidal (equation 5) given in standing waves(like flute), and with quantized solution modes (equation 6) and with allowed energy level as shown in equation 7:
+In an infinite potential well, the system potential  V(x)  is zero inside the well (similar to free space), but, infinite at and outside the well walls. This creates boundary conditions : the wave function is zero and outside beyond the walls of the well. The solution in the well is sinusoidal (equation 5) given in standing waves(like flute), and with quantized solution modes (equation 6) and with allowed energy level as shown in equation 7:
 
-$$
-E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}
-$$
+![](./images/eq3.png)
 
-
-where \( L \) is the width of the well and \( n \) is a positive integer.
+where  L  is the width of the well and  n is a positive integer.
 ![](./images/equation.png)
 
 ## Finite Potential Well
