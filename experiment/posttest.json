@@ -9,17 +9,29 @@
                 "c": "An infinite potential well has a continuous spectrum of energy, while a finite potential well has a discrete spectrum.",
                 "d": "An infinite potential well has zero probability of finding a particle outside the well, while a finite potential well has non-zero probability."
             },
+            "explanations": {
+                "a": "This is incorrect because both infinite and finite potential wells have discrete energy levels. The key difference lies in the height of the potential walls, not the number of energy levels.",
+                "b": "This is correct. An infinite potential well has walls with infinite height, meaning the particle cannot escape. A finite potential well has walls with finite height, allowing for the possibility of the particle tunneling outside the well.",
+                "c": "This is incorrect. Both infinite and finite potential wells have discrete energy levels. The difference is in the height of the potential walls, not the nature of the energy spectrum.",
+                "d": "This is partially correct but not the best answer. While it is true that a particle in an infinite potential well cannot be found outside the well, the primary difference lies in the height of the potential walls."
+            },
             "correctAnswer": "b",
             "difficulty": "intermediate"
         },
         {
             "question": "2. For an electron in an infinite potential well of width $L$, calculate the energy of the second excited state ($n=3$).",
             "answers": {
-              "a": "$E = \\frac{9\\pi^2\\hbar^2}{2mL^2}$",
-              "b": "$E = \\frac{6\\pi^2\\hbar^2}{mL^2}$",
-              "c": "$E = \\frac{3\\pi\\hbar}{mL}$",
-              "d": "$E = \\frac{9\\pi\\hbar^2}{2mL}$"
-            },          
+                "a": "$E = \\frac{9\\pi^2\\hbar^2}{2mL^2}$",
+                "b": "$E = \\frac{6\\pi^2\\hbar^2}{mL^2}$",
+                "c": "$E = \\frac{3\\pi\\hbar}{mL}$",
+                "d": "$E = \\frac{9\\pi\\hbar^2}{2mL}$"
+            },
+            "explanations": {
+                "a": "This is correct. The energy levels in an infinite potential well are given by $E_n = \\frac{n^2\\pi^2\\hbar^2}{2mL^2}$. For $n=3$, the energy is $E = \\frac{9\\pi^2\\hbar^2}{2mL^2}$.",
+                "b": "This is incorrect. The formula used here is incorrect because it does not match the standard formula for energy levels in an infinite potential well.",
+                "c": "This is incorrect. The formula used here is incorrect because it does not match the standard formula for energy levels in an infinite potential well.",
+                "d": "This is incorrect. The formula used here is incorrect because it does not match the standard formula for energy levels in an infinite potential well."
+            },
             "correctAnswer": "a",
             "difficulty": "advanced"
         },
@@ -31,29 +43,45 @@
                 "c": "The probability density of finding the particle at a given position.",
                 "d": "The force acting on the particle."
             },
+            "explanations": {
+                "a": "This is incorrect. The square of the wave function does not represent the velocity of the particle.",
+                "b": "This is incorrect. The square of the wave function does not represent the energy of the particle.",
+                "c": "This is correct. The square of the wave function (|ψ|^2) represents the probability density of finding the particle at a given position.",
+                "d": "This is incorrect. The square of the wave function does not represent the force acting on the particle."
+            },
             "correctAnswer": "c",
             "difficulty": "beginner"
         },
-        
-            {
-  "question": "4. Given the wave function $\\psi(x) = \\sqrt{2/L} \\sin\\left(\\frac{n\\pi x}{L}\\right)$ for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to $L/4$) for the ground state ($n=1$)?",
+        {
+            "question": "4. Given the wave function $\\psi(x) = \\sqrt{2/L} \\sin\\left(\\frac{n\\pi x}{L}\\right)$ for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to $L/4$) for the ground state ($n=1$)?",
             "answers": {
-                "a": "0.25",
-                "b": "0.5",
-                "c": "0.125",
-                "d": "0.75"
+                "a": "<0.25",
+                "b": "=0.5",
+                "c": "<0.5",
+                "d": "1"
+            },
+            "explanations": {
+                "a": "This is incorrect. The probability of finding the particle in the first quarter of the well is not less than 0.25.",
+                "b": "This is incorrect. The probability of finding the particle in the first quarter of the well is not exactly 0.5.",
+                "c": "This is correct. The probability of finding the particle in the first quarter of the well is less than 0.5 because the wave function is not uniformly distributed.",
+                "d": "This is incorrect. The probability of finding the particle in the first quarter of the well is not 1."
             },
             "correctAnswer": "c",
             "difficulty": "advanced"
         },
-        
         {
-            "question": "5. Which of these cannot be best explained using SWE ?",
+            "question": "5. Which of these cannot be best explained using SWE (Schrödinger Wave Equation)?",
             "answers": {
                 "a": "Electron cloud around atoms.",
                 "b": "Hole moving in silicon lattice",
                 "c": "Quantum dot",
                 "d": "motion of planets around star"
+            },
+            "explanations": {
+                "a": "This is incorrect. The electron cloud around atoms is best explained using the Schrödinger Wave Equation.",
+                "b": "This is incorrect. The motion of holes in a silicon lattice can be described using quantum mechanics, which includes the Schrödinger Wave Equation.",
+                "c": "This is incorrect. Quantum dots are systems where the Schrödinger Wave Equation is used to describe the behavior of electrons.",
+                "d": "This is correct. The motion of planets around a star is best explained using classical mechanics (Newton's laws of motion and gravitation), not the Schrödinger Wave Equation."
             },
             "correctAnswer": "d",
             "difficulty": "intermediate"
