@@ -249,9 +249,9 @@ function Visualize_INF() {
     //     console.error("Missing input elements.");
     //     return;
     // }
-    const Vo = Math.min(parseInt(document.getElementById('potential').value), 8);
+    const Vo = Math.min(1, 8);
     const n = parseInt(document.getElementById('w2').value);
-    const L = Math.max(10 - parseInt(document.getElementById('length').value), Math.ceil(n *1.5));
+    const L = Math.max(10 - 1, Math.ceil(n *1.5));
   
     
   
@@ -469,7 +469,7 @@ function Visualize_INF() {
   
   function navNext1a() {
     document.getElementById("canvas1").style.visibility = "hidden";
-    document.getElementById("canvas1a").style.visibility = "visible";
+    document.getElementById("canvas1b").style.visibility = "visible";
     setTimeout(function () {
       document.getElementById('"arw1"').style.visibility = "visible";
       document.getElementById('button50').style.visibility = "visible";
@@ -502,23 +502,13 @@ function Visualize_INF() {
   
   function navNext1c() {
     // document.getElementById("canvas1b").style.visibility = "hidden";
+    document.getElementById("canvas3").style.visibility = "visible";
+    
+  }
+  function navNext3() {
+    // document.getElementById("canvas1b").style.visibility = "hidden";
     document.getElementById("canvas1c").style.visibility = "visible";
-    // document.getElementById('addspecimen2b').style.visibility = "visible";
-    // document.getElementById("nextButton2").style.visibility = "hidden";
-    // document.getElementById('text16').style.visibility = "hidden";
-    // document.getElementById('box6').style.visibility = "hidden";
-    // document.getElementById('text17').style.visibility = "hidden";
-    // document.getElementById('text17b').style.visibility = "hidden";
-    // document.getElementById('box7').style.visibility = "hidden";
-    // document.getElementById('text18').style.visibility = "hidden";
-    // document.getElementById('text18b').style.visibility = "hidden";
-    // document.getElementById('box8').style.visibility = "hidden";
-    // document.getElementById('text19').style.visibility = "hidden";
-    // document.getElementById('text19b').style.visibility = "hidden";
-    // document.getElementById('eq1').style.visibility = "hidden";
-    // document.getElementById('eq2').style.visibility = "hidden";
-    // document.getElementById('eq3').style.visibility = "hidden";
-    // document.getElementById('eq4').style.visibility = "hidden";
+    
   }
   
   

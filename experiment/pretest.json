@@ -73,7 +73,7 @@
           },
           
         {
-            "question": "5. In a system which is invert of 1D finite potential well (i.e. system potential barrier V(x) exists, between x=0 and x=L and particle is free in d: 0.25 all other regions (x<0 and x>L). If particle is located in x<0 and moving towards x=0, what will be characteristics of SWE solution (wavefunction) is the barrier and in the free space?",
+            "question": "5. In a system which is invert of 1D finite potential well (i.e. system potential barrier V(x) exists, between x=0 and x=L and particle is free in  all other regions (x<0 and x>L). If particle is located in x<0 and moving towards x=0, what will be characteristics of SWE solution (wavefunction) is the barrier and in the free space?",
             "answers": {
                 "a": "Particle has a sinusoidal wave function every where",
                 "b": "Particle has a decaying wave function everywhere",
