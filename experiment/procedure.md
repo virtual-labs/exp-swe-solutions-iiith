@@ -1,1 +1,2 @@
 ### Procedure
+The user  first simulates various SWE  solutions for infinite potential well and then for the finite potential well. The user can learn how the energy and solution changes as value 'n' is increased. the user will also compare the difference in solution between the inifinte and finite potential well.
