@@ -39,7 +39,11 @@ Consider the simple 1D case, where particle exists freely and system potential i
 
 
 The solution to this SWE is given by equation 4 which is simplified to equation 5. With system boundary conditions,
+<<<<<<< HEAD
+we see that the qunatized wave solution to this is represented by equation 6 and allowed energy levels by equation7
+=======
 we see that the quantized wave solution to this is represented by equation 6 and allowed energy levels by equation7
+>>>>>>> refs/remotes/origin/dev
 ![Equation 4:](../experiment/simulation/images/equation4.png)
 ![Equation 5:](../experiment/simulation/images/equation5.png)
 Free Space  Example :Electron gun 
