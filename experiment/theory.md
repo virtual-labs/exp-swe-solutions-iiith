@@ -76,4 +76,5 @@ Inside the well, we again assume zero potential (like in Infinite potential well
  The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equatin 8: note exponent is a real number ) . The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
  <br>
 ![Equation 8: ](./simulation/images/equation8.png)
+<br>
 This normalization condition ensures that the particle exists somewhere in space.
