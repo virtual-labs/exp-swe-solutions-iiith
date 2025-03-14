@@ -8,10 +8,14 @@ The Schrödinger equation is a fundamental equation in quantum mechanics that de
 
 <img src="./simulation/images/eq1.png" width="300"></img>
 <br>
-![Equation 2:](./simulation/images/equation2.png)
+
+Equation 2: ![Equation 2:](./simulation/images/equation2.png)
 <br>
-![Equation 3:](./simulation/images/equation3.png)
+
+Equation 3: ![Equation 3:](./simulation/images/equation3.png)
 <br>
+
+
 ![](./simulation/images/equation3_a.png)
  
  Wave function is finite. If wave function is ψ(x) then at x = −∞ and x = +∞, ψ(x) = 0. 
@@ -49,10 +53,10 @@ The solution to this SWE is given by equation 4 which is simplified to equation 
 we see that the quantized wave solution to this is represented by equation 6 and allowed energy levels by equation7
 <br>
 
-![Equation 4 :](./simulation/images/equation4.png)
+Equation 4: ![Equation 4 :](./simulation/images/equation4.png)
 
 
-![Equation 5:](./simulation/images/equation5.png)
+Equation 5: ![Equation 5:](./simulation/images/equation5.png)
 
 <br>
 <br>
@@ -66,14 +70,16 @@ Consider an electron gun that emits electrons with a certain energy, These elect
 In an infinite potential well, the system potential  V(x)  is zero inside the well (similar to free space), but, infinite at and outside the well walls. This creates boundary conditions : the wave function is zero and outside beyond the walls of the well. The solution in the well is sinusoidal (equation 5) given in standing waves(like flute), and with quantized solution modes (equation 6) and with allowed energy level as shown in equation 7:
 where  L  is the width of the well and  n is a positive integer.
 <br>
-![Equation 5:](./simulation/images/equation5.png)
+
+Equation 6: ![Equation 5:](./simulation/images/equation5.png)
 
 <br>
 
-![Equation 6:](./simulation/images/equation6.png)
+Equation 7: ![Equation 6:](./simulation/images/equation6.png)
+
 <br>
 
-![Equation 7:](./simulation/images/equation7.png)
+Equation 8: ![Equation 7:](./simulation/images/equation7.png)
 <br>
 <!-- <img src="./images/equation.png" width="400"> -->
 
@@ -83,7 +89,7 @@ Inside the well, we again assume zero potential (like in Infinite potential well
  The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equatin 8: note exponent is a real number ) . The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
  <br>
 
-![Equation 8: ](./simulation/images/equation8.png)
+Equation 9: ![Equation 8:](./simulation/images/equation8.png)
 
 <br>
 This normalization condition ensures that the particle exists somewhere in space.
