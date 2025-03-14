@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"type="text/css">
     <link href="bootstrap.css" rel="stylesheet" type="text/css">
     <link href="iitstyle.css" rel="stylesheet" type="text/css">
-
+    
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script language="javascript" type="text/javascript" src="t/excanvas.js"></script>
@@ -36,45 +36,7 @@
 
     var simsubscreennum=0;
 
-    var temp=0;
-    function checkAnswersSecondSet() {
-    // Check first question in the second set
-    const selectedAnswer3 = document.querySelector('input[name="mcq3"]:checked');
-    const feedback3 = document.getElementById('feedback3');
-
-    if (selectedAnswer3) {
-        if (selectedAnswer3.value === "D") {
-            feedback3.textContent = "Correct!";
-            feedback3.style.color = "green";
-        } else {
-            feedback3.textContent = "Incorrect. Check again.";
-            feedback3.style.color = "red";
-        }
-    } else {
-        feedback3.textContent = "Please select an answer for Question 1.";
-        feedback3.style.color = "red";
-    }
-
-    // Check second question in the second set
-    const selectedAnswer4 = document.querySelector('input[name="mcq4"]:checked');
-    const feedback4 = document.getElementById('feedback4');
-
-    if (selectedAnswer4) {
-        if (selectedAnswer4.value === "A") {
-            feedback4.textContent = "Correct!";
-            feedback4.style.color = "green";
-        } else {
-            feedback4.textContent = "Incorrect. Check again.";
-            feedback4.style.color = "red";
-        }
-    } else {
-        feedback4.textContent = "Please select an answer for Question 2.";
-        feedback4.style.color = "red";
-    }
-}  
-    
-
-
+    var temp=0;  
 </script>
 
 </head>
@@ -93,11 +55,10 @@
         height: auto; /* Adjust height to fit content */
         margin-right: 27px;
         margin-left: 1px;
-   
         padding: 20px;">
         
         <!-- First Question -->
-        <p class="incanvas" style="font-size:14px;"><strong>Question 1: How many nodes (just like ndoes in windpipe ) will you see in the solution for quantum number =5 inside infinite well? </strong></p>
+        <p class="incanvas" style="font-size:14px;"><strong>Question 1: How many nodes (just like nodes in windpipe ) will you see in the solution for quantum number =5 inside infinite well? </strong></p>
         <p class="incanvas" style="font-size:14px;">?</p>
         
         <form id="mcqForm1">
@@ -151,26 +112,30 @@
     </div>
 
     <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px; left: 535px; top: 500px; color: #2150a0;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-    <input type="button" id="nextButton0" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1a()"/>
+    <input type="button" id="nextButton0" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; display: none;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1a()"/>
 </div>
 
 <script>
     function checkAnswers() {
+        let allCorrect = true;
+
         // Check first question
         const selectedAnswer1 = document.querySelector('input[name="mcq1"]:checked');
         const feedback1 = document.getElementById('feedback1');
 
         if (selectedAnswer1) {
             if (selectedAnswer1.value === "B") {
-                feedback1.textContent = "Correct!"
+                feedback1.textContent = "Correct!";
                 feedback1.style.color = "green";
             } else {
-                feedback1.textContent = "Incorrect. check again.";
+                feedback1.textContent = "Incorrect. Check again.";
                 feedback1.style.color = "red";
+                allCorrect = false;
             }
         } else {
             feedback1.textContent = "Please select an answer for Question 1.";
             feedback1.style.color = "red";
+            allCorrect = false;
         }
 
         // Check second question
@@ -184,10 +149,20 @@
             } else {
                 feedback2.textContent = "Incorrect. Check relation between energy and quantum number.";
                 feedback2.style.color = "red";
+                allCorrect = false;
             }
         } else {
             feedback2.textContent = "Please select an answer for Question 2.";
             feedback2.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Show the "Start Experiment" button if all answers are correct
+        const nextButton = document.getElementById('nextButton0');
+        if (allCorrect) {
+            nextButton.style.display = "inline-block"; // Reveal the button
+        } else {
+            nextButton.style.display = "none"; // Hide the button
         }
     }
 </script>
@@ -333,8 +308,60 @@ value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
         <p id="feedback4" style="font-size:14px; margin-top: 10px; color: green;"></p>
     </div>
     <span class="blink_me" id="arrowcubox3" style="position:absolute; font-size: 30px; left: 535px; top: 500px; color: #2150a0;"><strong><i class="fa fa-arrow-right"></i></strong></span>
-    <input type="button" id="nextButton3" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" value="&nbsp;Next&nbsp;" onclick="navNext3()"/>
+    <input type="button" id="nextButton3" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; display: none;" value="&nbsp;Next&nbsp;" onclick="navNext3()"/>
 </div>
+
+<script>
+    function checkAnswersSecondSet() {
+        let allCorrect = true;
+
+        // Check first question in the second set
+        const selectedAnswer3 = document.querySelector('input[name="mcq3"]:checked');
+        const feedback3 = document.getElementById('feedback3');
+
+        if (selectedAnswer3) {
+            if (selectedAnswer3.value === "D") {
+                feedback3.textContent = "Correct!";
+                feedback3.style.color = "green";
+            } else {
+                feedback3.textContent = "Incorrect. Check again.";
+                feedback3.style.color = "red";
+                allCorrect = false;
+            }
+        } else {
+            feedback3.textContent = "Please select an answer for Question 1.";
+            feedback3.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Check second question in the second set
+        const selectedAnswer4 = document.querySelector('input[name="mcq4"]:checked');
+        const feedback4 = document.getElementById('feedback4');
+
+        if (selectedAnswer4) {
+            if (selectedAnswer4.value === "A") {
+                feedback4.textContent = "Correct!";
+                feedback4.style.color = "green";
+            } else {
+                feedback4.textContent = "Incorrect. Check again.";
+                feedback4.style.color = "red";
+                allCorrect = false;
+            }
+        } else {
+            feedback4.textContent = "Please select an answer for Question 2.";
+            feedback4.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Show the "Next" button if all answers are correct
+        const nextButton3 = document.getElementById('nextButton3');
+        if (allCorrect) {
+            nextButton3.style.display = "inline-block"; // Reveal the button
+        } else {
+            nextButton3.style.display = "none"; // Hide the button
+        }
+    }
+</script>
 <!-- JavaScript code to create the chart -->
 <div class="simsubscreen" id="canvas1c" style="visibility: hidden; background: url(images/); overflow: hidden;">
     <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
