@@ -8,7 +8,9 @@ The Schrödinger equation is a fundamental equation in quantum mechanics that de
 
 <img src="./simulation/images/eq1.png" width="300"></img>
 ![Equation 2:](../experiment/simulation/images/equation2.png)
+<br>
 ![Equation 3:](../experiment/simulation/images/equation3.png)
+<br>
 ![](../experiment/simulation/images/equation3_a.png)
  
  Wave function is finite. If wave function is ψ(x) then at x = −∞ and x = +∞, ψ(x) = 0. 
