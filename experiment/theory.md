@@ -12,8 +12,7 @@ The Schrödinger equation is a fundamental equation in quantum mechanics that de
 Eq 2:  ![Equation 2:](./simulation/images/equation2.png)
 <br>
 
-       ![Equation 3:](./simulation/images/equation3.png)
-<br>
+![Equation 3:](./simulation/images/equation3.png)
 
 Eq 3:  ![](./simulation/images/equation3_a.png)
  
