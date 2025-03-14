@@ -9,12 +9,13 @@ The Schrödinger equation is a fundamental equation in quantum mechanics that de
 <img src="./simulation/images/eq1.png" width="300"></img>
 <br>
 
-![](./simulation/images/equation2.png)                   ....(2)
+Eq 2:  ![Equation 2:](./simulation/images/equation2.png)
+<br>
 
+       ![Equation 3:](./simulation/images/equation3.png)
+<br>
 
- ![](./simulation/images/equation3.png)                  ....(3)
-
-![](./simulation/images/equation3_a.png)
+Eq 3:  ![](./simulation/images/equation3_a.png)
  
  Wave function is finite. If wave function is ψ(x) then at x = −∞ and x = +∞, ψ(x) = 0. 
  ψ(x) must be continuous across all boundaries. No discontinuity can exist
@@ -52,10 +53,10 @@ we see that the quantized wave solution to this is represented by equation 6 and
 
 <br>
 
- ![Equation 4 :](./simulation/images/equation4.png)            ....(4)
+Eq 4:    ![Equation 4 :](./simulation/images/equation4.png)
 
 
- ![Equation 5:](./simulation/images/equation5.png)             ....(5)
+Eq 5:    ![Equation 5:](./simulation/images/equation5.png)
 
 <br>
 <br>
@@ -70,15 +71,15 @@ In an infinite potential well, the system potential  V(x)  is zero inside the we
 where  L  is the width of the well and  n is a positive integer.
 <br>
 
- ![Equation 5:](./simulation/images/equation5.png)           ....(6)
+Eq 6:   ![Equation 5:](./simulation/images/equation5.png)
 
 <br>
 
- ![Equation 6:](./simulation/images/equation6.png)           ....(7)
+Eq 7:   ![Equation 6:](./simulation/images/equation6.png)
 
 <br>
 
-  ![Equation 7:](./simulation/images/equation7.png)            ....(8)
+Eq 8:   ![Equation 7:](./simulation/images/equation7.png)
 <br>
 <!-- <img src="./images/equation.png" width="400"> -->
 
@@ -87,8 +88,8 @@ Finite potential well is potential well where the well boundaries are defined by
 Inside the well, we again assume zero potential (like in Infinite potential well) and finite value V(x) at the boundary and beyond.
  The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equatin 8: note exponent is a real number ) . The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
  <br>
- 
-  ![Equation 8:](./simulation/images/equation8.png)           ....(8)
+
+Eq 9: ![Equation 8:](./simulation/images/equation8.png)
 
 <br>
 This normalization condition ensures that the particle exists somewhere in space.
