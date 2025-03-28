@@ -1,5 +1,5 @@
 ## Wave Equation 
-In quantum mechanics, a small particle like elctron, is known to exist both as a particle and as a wave (wave particle duality).
+In quantum mechanics, a small particle like electron, is known to exist both as a particle and as a wave (wave particle duality).
 The wave equation describes the movement of energy and is expressed in form of amplitude or energy with respect to location and time In quantum mechanics, the wave equation is known as the Schrödinger equation, which represents the probability of finding the particles in space.
 
 ## Schrödinger Wave Equation
