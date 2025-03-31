@@ -1,1 +1,1 @@
-## Introduce & explain other cases of inf, fin, and other swe solutions.
+## Schrodinger Wave Equation and Solution.
