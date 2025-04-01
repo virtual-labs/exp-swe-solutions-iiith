@@ -1,0 +1,19 @@
+
+/home/runner/work/exp-swe-solutions-iiith/exp-swe-solutions-iiith/experiment/simulation/main.js
+    2:10  warning  'Visualize_INF' is defined but never used  no-unused-vars
+   39:35  warning  'Chart' is not defined                     no-undef
+   44:26  warning  'Chart' is not defined                     no-undef
+  247:12  warning  'Visualize_FN' is defined but never used   no-unused-vars
+  263:11  warning  'U' is assigned a value but never used     no-unused-vars
+  340:33  warning  'Chart' is not defined                     no-undef
+  344:24  warning  'Chart' is not defined                     no-undef
+  402:12  warning  'restart' is defined but never used        no-unused-vars
+  406:12  warning  'navNext0' is defined but never used       no-unused-vars
+  447:12  warning  'navNext0a' is defined but never used      no-unused-vars
+  470:12  warning  'navNext1a' is defined but never used      no-unused-vars
+  483:12  warning  'navNext1b' is defined but never used      no-unused-vars
+  503:12  warning  'navNext1c' is defined but never used      no-unused-vars
+  508:12  warning  'navNext3' is defined but never used       no-unused-vars
+
+✖ 14 problems (0 errors, 14 warnings)
+
