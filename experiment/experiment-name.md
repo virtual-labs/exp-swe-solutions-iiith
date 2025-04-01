@@ -1,1 +1,1 @@
-## Schordinger Wave Equation and Infinite and Finite potential well
+## Schrodinger Wave Equation and Solution
