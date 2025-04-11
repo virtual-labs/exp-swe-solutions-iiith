@@ -3,6 +3,13 @@
   "label": "Schrodinger Wave Equation and Solution",
   "basedir": ".",
   "LaTeXinMD": true,
+  "code-assessment": {
+    "include": false,
+    "languages": ["javascript"],
+    "position": 5
+  },
+  "services": [],
+  "service-worker": "/path/to/service-worker.js",
   "units": [
     {
       "unit-type": "aim"
@@ -33,7 +40,8 @@
       "source": "simulation/index.html",
       "label": "Simulation",
       "unit-type": "task",
-      "content-type": "simulation"
+      "content-type": "simulation",
+      "additional-sources": []
     },
     {
       "target": "posttest.html",
