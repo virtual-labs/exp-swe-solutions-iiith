@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Did You Know? - Amazing PN Junction Facts! 🤯</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .mind-blown {
+            font-size: 3rem;
+            animation: bounce 2s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-content-stats {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .bottom-content-stats .stats-bar {
+            margin-bottom: 20px;
+        }
+
+        .bottom-content-stats .progress-bar {
+            margin-bottom: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6366f1;
+            display: block;
+            animation: countUp 2s ease-out;
+            transition: all 0.5s ease;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .fact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-color: #6366f1;
+        }
+
+        .fact-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .fact-card.fact-read {
+            border: 2px solid #f59e0b;
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fact-card.fact-read::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(251, 191, 36, 0.1), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes shimmer {
+            0% { 
+                transform: translateX(-100%) translateY(-100%) rotate(45deg); 
+            }
+            100% { 
+                transform: translateX(100%) translateY(100%) rotate(45deg); 
+            }
+        }
+
+        @keyframes progressShimmer {
+            0% { 
+                transform: translateX(-100%); 
+            }
+            100% { 
+                transform: translateX(100%); 
+            }
+        }
+
+        @keyframes celebrationBounce {
+            0% { 
+                transform: translate(-50%, -50%) scale(0); 
+                opacity: 0; 
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.2); 
+                opacity: 1; 
+            }
+            100% { 
+                transform: translate(-50%, -50%) scale(1); 
+                opacity: 1; 
+            }
+        }
+
+        @keyframes goldenRain {
+            0% { 
+                transform: translateY(0) rotate(0deg); 
+                opacity: 1; 
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+
+        .fact-card.fact-read .fact-title {
+            color: #92400e;
+            font-weight: 700;
+        }
+
+        .fact-card.fact-read .fact-content {
+            color: #78350f;
+        }
+
+        .fact-card.fact-read .fact-highlight {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            border-left: 4px solid #d97706;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+        }
+
+        .golden-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .golden-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #fbbf24, #f59e0b);
+            border-radius: 50%;
+            animation: floatUp 2s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.5);
+            }
+        }
+
+        .golden-crown {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            animation: crownDrop 1s ease-out;
+            z-index: 5;
+            filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.5));
+        }
+
+        @keyframes crownDrop {
+            0% {
+                transform: translateX(-50%) translateY(-30px) rotate(-10deg);
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(-50%) translateY(5px) rotate(5deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-50%) translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .golden-ribbon {
+            position: absolute;
+            top: 10px;
+            right: -20px;
+            width: 80px;
+            height: 25px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+            animation: ribbonSlide 0.7s ease-out;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+            z-index: 4;
+        }
+
+        @keyframes ribbonSlide {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .fact-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .fact-icon {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .fact-category {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .fact-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .fact-content {
+            color: #4b5563;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .fact-highlight {
+            background: linear-gradient(135deg, #fef3c7, #fed7aa);
+            padding: 12px 15px;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+            font-weight: 600;
+            color: #92400e;
+            margin: 10px 0;
+        }
+
+        .fact-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .amazement-meter {
+            display: flex;
+            gap: 3px;
+        }
+
+        .amazement-star {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            animation: twinkle 2s ease-in-out infinite alternate;
+        }
+
+        .amazement-star:nth-child(2) { animation-delay: 0.2s; }
+        .amazement-star:nth-child(3) { animation-delay: 0.4s; }
+        .amazement-star:nth-child(4) { animation-delay: 0.6s; }
+        .amazement-star:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .share-btn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(90deg); }
+            50% { transform: translateY(-40px) rotate(180deg); }
+            75% { transform: translateY(-20px) rotate(270deg); }
+        }
+
+        .floating-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; color: #6366f1; }
+        .floating-icon:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; color: #8b5cf6; }
+        .floating-icon:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 4s; color: #10b981; }
+        .floating-icon:nth-child(4) { bottom: 15%; right: 10%; animation-delay: 6s; color: #f59e0b; }
+        .floating-icon:nth-child(5) { top: 50%; left: 5%; animation-delay: 8s; color: #ef4444; }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: progressShimmer 2s ease-in-out infinite;
+        }
+
+        .progress-fill.reading-progress {
+            animation: progressGlow 0.5s ease-out;
+        }
+
+        @keyframes progressGlow {
+            0% { box-shadow: 0 0 0 rgba(251, 191, 36, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.8); }
+            100% { box-shadow: 0 0 0 rgba(251, 191, 36, 0.5); }
+        }
+
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 25px;
+            background: white;
+            color: #6b7280;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active,
+        .category-btn:hover {
+            border-color: #6366f1;
+            background: #6366f1;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .mind-blown {
+                font-size: 2.5rem;
+            }
+            
+            .facts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bottom-content-stats {
+                margin-top: 30px;
+                padding-top: 20px;
+            }
+            
+            .bottom-content-stats .stats-bar {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-icon">🔬</div>
+        <div class="floating-icon">⚡</div>
+        <div class="floating-icon">🧪</div>
+        <div class="floating-icon">💡</div>
+        <div class="floating-icon">⚛️</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Fact Vault</h1>
+            <p class="subtitle">Fascinating MOS Facts</p>
+        </div>
+
+        <div class="category-filter">
+            <button class="category-btn active" onclick="filterByCategory('all')">All</button>
+            <button class="category-btn" onclick="filterByCategory('physics')">Physics</button>
+            <button class="category-btn" onclick="filterByCategory('history')">History</button>
+            <button class="category-btn" onclick="filterByCategory('applications')">Applications</button>
+            <button class="category-btn" onclick="filterByCategory('amazing')">Amazing</button>
+        </div>
+
+        <div class="facts-grid" id="factsGrid">
+            <!-- Facts will be populated by JavaScript -->
+        </div>
+
+        <!-- Stats and Progress at bottom of content -->
+        <div class="bottom-content-stats">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number" id="factsRead">0</span>
+                    <span class="stat-label">Facts Read</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let factsRead = 0;
+        let readFacts = new Set(); // Track which facts have been read
+        let intersectionObserver; // For scroll-based reading detection
+
+        // Fun facts database
+        const funFacts = [
+        {
+            id: 1,
+            category: 'history',
+            icon: '📜',
+            title: 'Birth of the Wave Equation',
+            content: 'In 1926, Erwin Schrödinger proposed the wave equation that describes how the quantum state of a physical system evolves over time.',
+            highlight: 'Schrödinger’s insight redefined the fabric of modern quantum mechanics!',
+            amazement: 5,
+            shareText: '1926: Schrödinger’s wave equation changed how we see electrons forever! 📜'
+        },
+        {
+            id: 2,
+            category: 'physics',
+            icon: '📉',
+            title: 'Wavefunction Squared = Probability',
+            content: 'The square of the wavefunction |ψ(x)|² gives the probability of finding a particle at position x—quantum mechanics is inherently probabilistic.',
+            highlight: 'It’s not about where the particle is, but where it’s likely to be!',
+            amazement: 5,
+            shareText: 'Wavefunction squared = probability density—quantum mechanics is statistical! 📉'
+        },
+        {
+            id: 3,
+            category: 'physics',
+            icon: '📦',
+            title: 'Infinite Well = Discrete Energies',
+            content: 'A particle in an infinite potential well has only specific allowed energy levels—quantization emerges from boundary conditions.',
+            highlight: 'In a quantum box, energy jumps in fixed steps!',
+            amazement: 4,
+            shareText: 'Infinite potential wells allow only discrete energy states! 📦'
+        },
+        {
+            id: 4,
+            category: 'physics',
+            icon: '🌊',
+            title: 'Wave Patterns in Wells',
+            content: 'The number of peaks in a wavefunction increases with energy level—the 1st level has one hump, 2nd has two, and so on.',
+            highlight: 'Higher energy means more wave wiggles!',
+            amazement: 4,
+            shareText: 'In potential wells, each energy level adds more wave peaks! 🌊'
+        },
+        {
+            id: 5,
+            category: 'math',
+            icon: '🔢',
+            title: 'Energy Levels Scale as n²',
+            content: 'In an infinite well, energy levels scale with the square of the quantum number: Eₙ ∝ n².',
+            highlight: 'Go from n=1 to n=3, and energy jumps by 9x!',
+            amazement: 4,
+            shareText: 'Infinite well: Eₙ ∝ n²—quantum levels rise fast! 🔢'
+        },
+        {
+            id: 6,
+            category: 'applications',
+            icon: '🔬',
+            title: 'Quantum Dots = Tiny Wells',
+            content: 'Quantum dots confine electrons in all 3 dimensions—like tiny artificial atoms built with potential wells.',
+            highlight: 'Quantum wells make real nanotech magic possible!',
+            amazement: 5,
+            shareText: 'Quantum dots = 3D potential wells trapping electrons like atoms! 🔬'
+        },
+        {
+            id: 7,
+            category: 'physics',
+            icon: '🚫',
+            title: 'Forbidden Inside a Barrier?',
+            content: 'Even when classical physics says “no entry,” quantum mechanics allows particles to tunnel through finite barriers!',
+            highlight: 'Quantum particles are sneaky—barriers can’t always stop them!',
+            amazement: 5,
+            shareText: 'Tunneling: Quantum particles pass through forbidden zones! 🚫'
+        },
+        {
+            id: 8,
+            category: 'amazing',
+            icon: '🎯',
+            title: 'Zero in the Middle?',
+            content: 'In some excited states of the infinite well, the wavefunction goes to zero in the center—nodes where the particle never appears!',
+            highlight: 'Some energy levels have zero probability at the center!',
+            amazement: 4,
+            shareText: 'Nodes = places where particle probability drops to zero! 🎯'
+        },
+        {
+            id: 9,
+            category: 'applications',
+            icon: '📱',
+            title: 'Tunneling Powers Flash Storage',
+            content: 'Quantum tunneling allows charge to move through thin oxide barriers in flash memory programming.',
+            highlight: 'Quantum effects make your phone’s memory possible!',
+            amazement: 4,
+            shareText: 'Tunneling helps write bits in flash memory chips! 📱'
+        },
+        {
+            id: 10,
+            category: 'physics',
+            icon: '🎵',
+            title: 'Standing Waves',
+            content: 'Solutions to the SWE in a well resemble standing waves, just like plucked strings on a musical instrument.',
+            highlight: 'Quantum wells sing in wave patterns like musical notes!',
+            amazement: 4,
+            shareText: 'Wavefunctions in a box = standing waves with fixed nodes! 🎵'
+        },
+        {
+            id: 11,
+            category: 'math',
+            icon: '➗',
+            title: 'Wavelength Shrinks with Energy',
+            content: 'Higher-energy wavefunctions have shorter wavelengths inside the well, due to greater momentum.',
+            highlight: 'More energy = more oscillations per unit length!',
+            amazement: 3,
+            shareText: 'In potential wells, energy up means wavelength down! ➗'
+        },
+        {
+            id: 12,
+            category: 'history',
+            icon: '🧠',
+            title: 'Einstein Didn’t Like It',
+            content: 'Einstein famously resisted the probabilistic nature of Schrödinger’s equation, saying, “God does not play dice.”',
+            highlight: 'Even Einstein struggled with quantum uncertainty!',
+            amazement: 4,
+            shareText: 'Einstein vs. quantum mechanics—he hated the dice rolls! 🧠'
+        },
+        {
+            id: 13,
+            category: 'physics',
+            icon: '⚖️',
+            title: 'Momentum from Waves',
+            content: 'The de Broglie relation p = ħk links the wave’s spatial frequency to particle momentum.',
+            highlight: 'Wave oscillations tell us momentum!',
+            amazement: 4,
+            shareText: 'Momentum from wave number? That’s de Broglie in action! ⚖️'
+        },
+        {
+            id: 14,
+            category: 'amazing',
+            icon: '🌀',
+            title: 'Wavefunction Tails in Finite Wells',
+            content: 'In a finite well, wavefunctions leak slightly into the barrier—unlike infinite wells where they vanish instantly.',
+            highlight: 'In finite wells, particles live partly in the “forbidden” zone!',
+            amazement: 5,
+            shareText: 'Finite wells allow wavefunctions to sneak into the barrier! 🌀'
+        },
+        {
+            id: 15,
+            category: 'applications',
+            icon: '💻',
+            title: 'Quantum Wells in Semiconductors',
+            content: 'Real semiconductor devices use engineered quantum wells to control electrons in lasers, detectors, and transistors.',
+            highlight: 'Quantum wells are active layers in many modern chips!',
+            amazement: 4,
+            shareText: 'Quantum wells power optoelectronics and high-speed devices! 💻'
+        },
+        {
+            id: 16,
+            category: 'physics',
+            icon: '📐',
+            title: 'Length Shrinks, Energy Jumps',
+            content: 'Reducing well width increases energy level spacing dramatically—size defines the quantum states!',
+            highlight: 'Smaller wells make quantum jumps steeper!',
+            amazement: 4,
+            shareText: 'Shorter well → higher energy spacing! 📐'
+        },
+        {
+            id: 17,
+            category: 'math',
+            icon: '🧮',
+            title: 'Sine Solutions in a Box',
+            content: 'The SWE in a 1D infinite potential well yields sine wave solutions inside the box.',
+            highlight: 'Boundaries force wavefunctions into sine patterns!',
+            amazement: 3,
+            shareText: 'Infinite well? Expect sine wavefunctions inside! 🧮'
+        },
+        {
+            id: 18,
+            category: 'amazing',
+            icon: '🔁',
+            title: 'Stationary but Not Static',
+            content: 'Time-independent solutions look “frozen,” but the full quantum state includes oscillating phase factors!',
+            highlight: 'Stationary states are alive with internal time evolution!',
+            amazement: 4,
+            shareText: 'Stationary doesn’t mean static—quantum states still evolve! 🔁'
+        },
+        {
+            id: 19,
+            category: 'applications',
+            icon: '🛰️',
+            title: 'SWE in Nanostructures',
+            content: 'Designing quantum wires and wells for nanoscale electronics depends directly on solving the Schrödinger Equation.',
+            highlight: 'Nanotech begins with solving quantum boundary problems!',
+            amazement: 4,
+            shareText: 'Nano-engineering uses SWE to trap electrons in custom wells! 🛰️'
+        },
+        {
+            id: 20,
+            category: 'amazing',
+            icon: '🔍',
+            title: 'Probability Never Exceeds 1',
+            content: 'The total area under |ψ(x)|² must be 1—ensuring the particle exists somewhere in the system.',
+            highlight: 'Quantum normalization guarantees the particle’s presence!',
+            amazement: 3,
+            shareText: 'Wavefunction is always normalized—probability = 1 total! 🔍'
+        }
+        ];
+
+
+
+
+        // Initialize the page
+        function initializePage() {
+            renderFacts();
+            updateStats();
+            setupEventListeners();
+            setupScrollBasedReading();
+            animateCounters();
+        }
+
+        // Setup scroll-based reading detection
+        function setupScrollBasedReading() {
+            intersectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const factId = parseInt(entry.target.dataset.factId);
+                        if (!readFacts.has(factId)) {
+                            markFactAsRead(factId);
+                            entry.target.classList.add('fact-read');
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.7, // Trigger when 70% of the fact card is visible
+                rootMargin: '0px 0px -50px 0px' // Adjust trigger point
+            });
+        }
+
+        // Render all facts
+        function renderFacts(filter = 'all') {
+            const grid = document.getElementById('factsGrid');
+            grid.innerHTML = '';
+            
+            // Disconnect existing observer
+            if (intersectionObserver) {
+                intersectionObserver.disconnect();
+            }
+            
+            // Re-setup the observer
+            setupScrollBasedReading();
+            
+            const filteredFacts = filter === 'all' ? funFacts : funFacts.filter(fact => fact.category === filter);
+            
+            filteredFacts.forEach(fact => {
+                const factCard = createFactCard(fact);
+                grid.appendChild(factCard);
+            });
+        }
+
+        // Create a fact card element
+        function createFactCard(fact) {
+            const card = document.createElement('div');
+            card.className = 'fact-card';
+            card.dataset.category = fact.category;
+            card.dataset.factId = fact.id;
+            
+            const amazementStars = '⭐'.repeat(fact.amazement);
+            
+            card.innerHTML = `
+                <div class="fact-header">
+                    <div class="fact-icon">${fact.icon}</div>
+                    <div class="fact-category">${fact.category.charAt(0).toUpperCase() + fact.category.slice(1)}</div>
+                </div>
+                <div class="fact-title">${fact.title}</div>
+                <div class="fact-content">${fact.content}</div>
+                <div class="fact-highlight">${fact.highlight}</div>
+                <div class="fact-footer">
+                    <div class="amazement-meter">
+                        ${'<span class="amazement-star">⭐</span>'.repeat(fact.amazement)}
+                    </div>
+                    <button class="share-btn" onclick="shareFact(${fact.id})">
+                        <i class="fas fa-share-alt"></i> Share
+                    </button>
+                </div>
+            `;
+            
+            // Add click interaction for sparkle effect
+            card.addEventListener('click', (e) => {
+                const isRead = readFacts.has(fact.id);
+                createSparkle(e.pageX, e.pageY, isRead);
+                card.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            });
+            
+            // Observe this card for scroll-based reading
+            intersectionObserver.observe(card);
+            
+            return card;
+        }
+
+        // Mark fact as read and update stats
+        function markFactAsRead(factId) {
+            if (!readFacts.has(factId)) {
+                readFacts.add(factId);
+                factsRead++;
+                updateStats();
+                updateProgress();
+                
+                // Add golden animation effects
+                const factCard = document.querySelector(`[data-fact-id="${factId}"]`);
+                if (factCard) {
+                    addGoldenEffects(factCard);
+                }
+            }
+        }
+
+        // Add beautiful golden animation effects
+        function addGoldenEffects(factCard) {
+            // Add golden glow effect
+            factCard.style.boxShadow = '0 15px 35px rgba(245, 158, 11, 0.4), 0 0 20px rgba(251, 191, 36, 0.3)';
+            
+            // Random golden effect selection (simplified for elegance)
+            const effects = ['particles', 'crown'];
+            const randomEffect = effects[Math.floor(Math.random() * effects.length)];
+            
+            switch (randomEffect) {
+                case 'particles':
+                    createGoldenParticles(factCard);
+                    break;
+                case 'crown':
+                    createGoldenCrown(factCard);
+                    break;
+            }
+            
+            // Reset glow after animation
+            setTimeout(() => {
+                factCard.style.boxShadow = '0 8px 25px rgba(245, 158, 11, 0.2)';
+            }, 2000);
+        }
+
+        // Create floating golden particles
+        function createGoldenParticles(factCard) {
+            const particleContainer = document.createElement('div');
+            particleContainer.className = 'golden-particles';
+            factCard.appendChild(particleContainer);
+            
+            for (let i = 0; i < 6; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'golden-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = (i * 0.1) + 's';
+                particleContainer.appendChild(particle);
+            }
+            
+            setTimeout(() => {
+                factCard.removeChild(particleContainer);
+            }, 2000);
+        }
+
+        // Create golden crown
+        function createGoldenCrown(factCard) {
+            const crown = document.createElement('div');
+            crown.className = 'golden-crown';
+            crown.textContent = '👑';
+            factCard.appendChild(crown);
+            
+            setTimeout(() => {
+                crown.style.opacity = '0';
+                setTimeout(() => {
+                    if (factCard.contains(crown)) {
+                        factCard.removeChild(crown);
+                    }
+                }, 300);
+            }, 2500);
+        }
+
+        // Update statistics display
+        function updateStats() {
+            const factsReadElement = document.getElementById('factsRead');
+            
+            // Add golden glow effect when stats update
+            factsReadElement.style.color = '#f59e0b';
+            factsReadElement.style.textShadow = '0 0 10px rgba(251, 191, 36, 0.5)';
+            factsReadElement.style.transform = 'scale(1.1)';
+            
+            setTimeout(() => {
+                factsReadElement.style.color = '#6366f1';
+                factsReadElement.style.textShadow = 'none';
+                factsReadElement.style.transform = 'scale(1)';
+            }, 500);
+            
+            factsReadElement.textContent = factsRead;
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const progress = Math.min(100, (factsRead / funFacts.length) * 100);
+            const progressFill = document.getElementById('progressFill');
+            progressFill.style.width = progress + '%';
+            
+            // Add golden glow effect when progress increases
+            progressFill.classList.add('reading-progress');
+            setTimeout(() => {
+                progressFill.classList.remove('reading-progress');
+            }, 500);
+            
+            // Golden celebration when all facts are read
+            if (progress === 100) {
+                setTimeout(() => {
+                    createGoldenCelebration();
+                }, 1000);
+            }
+        }
+
+        // Create golden celebration effect
+        function createGoldenCelebration() {
+            const celebration = document.createElement('div');
+            celebration.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 4rem;
+                z-index: 1002;
+                animation: celebrationBounce 2s ease-out;
+                text-shadow: 0 0 20px rgba(251, 191, 36, 0.8);
+                pointer-events: none;
+            `;
+            celebration.textContent = '🏆✨';
+            document.body.appendChild(celebration);
+            
+            // Create golden rain effect
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const drop = document.createElement('div');
+                    drop.style.cssText = `
+                        position: fixed;
+                        top: -10px;
+                        left: ${Math.random() * 100}%;
+                        width: 8px;
+                        height: 8px;
+                        background: radial-gradient(circle, #fbbf24, #f59e0b);
+                        border-radius: 50%;
+                        animation: goldenRain 3s linear forwards;
+                        z-index: 1001;
+                        pointer-events: none;
+                    `;
+                    document.body.appendChild(drop);
+                    
+                    setTimeout(() => {
+                        if (document.body.contains(drop)) {
+                            document.body.removeChild(drop);
+                        }
+                    }, 3000);
+                }, i * 50);
+            }
+            
+            setTimeout(() => {
+                if (document.body.contains(celebration)) {
+                    document.body.removeChild(celebration);
+                }
+            }, 2000);
+        }
+
+        // Animate counters on load
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                counter.textContent = '0';
+                
+                const increment = target / 50;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 40);
+            });
+        }
+
+        // Filter facts by category
+        function filterByCategory(category) {
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Filter and render facts
+            renderFacts(category);
+        }
+
+        // Share fact
+        function shareFact(factId) {
+            const fact = funFacts.find(f => f.id === factId);
+            if (fact) {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Did You Know? - ' + fact.title,
+                        text: fact.shareText,
+                        url: window.location.href
+                    });
+                } else {
+                    // Fallback for browsers without native sharing
+                    const textArea = document.createElement('textarea');
+                    textArea.value = fact.shareText + ' - ' + window.location.href;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Show copied message
+                    const shareBtn = event.target.closest('.share-btn');
+                    const originalText = shareBtn.innerHTML;
+                    shareBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        shareBtn.innerHTML = originalText;
+                    }, 2000);
+                }
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Add some fun interactions
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('fact-card')) {
+                    createSparkle(e.pageX, e.pageY);
+                }
+            });
+        }
+
+        // Create sparkle effect
+        function createSparkle(x, y, isGolden = false) {
+            const sparkle = document.createElement('div');
+            const color = isGolden ? '#fbbf24' : '#6366f1';
+            const secondColor = isGolden ? '#f59e0b' : '#8b5cf6';
+            
+            sparkle.style.cssText = `
+                position: fixed;
+                left: ${x}px;
+                top: ${y}px;
+                width: 12px;
+                height: 12px;
+                background: radial-gradient(circle, ${color}, ${secondColor});
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1001;
+                animation: sparkle 0.8s ease-out forwards;
+                box-shadow: 0 0 10px ${color};
+            `;
+            
+            document.body.appendChild(sparkle);
+            
+            // Add extra sparkles for golden effect
+            if (isGolden) {
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const extraSparkle = document.createElement('div');
+                        extraSparkle.style.cssText = `
+                            position: fixed;
+                            left: ${x + (Math.random() - 0.5) * 40}px;
+                            top: ${y + (Math.random() - 0.5) * 40}px;
+                            width: 8px;
+                            height: 8px;
+                            background: radial-gradient(circle, ${color}, ${secondColor});
+                            border-radius: 50%;
+                            pointer-events: none;
+                            z-index: 1001;
+                            animation: sparkle 0.6s ease-out forwards;
+                        `;
+                        document.body.appendChild(extraSparkle);
+                        setTimeout(() => {
+                            if (document.body.contains(extraSparkle)) {
+                                document.body.removeChild(extraSparkle);
+                            }
+                        }, 600);
+                    }, i * 100);
+                }
+            }
+            
+            setTimeout(() => {
+                if (document.body.contains(sparkle)) {
+                    document.body.removeChild(sparkle);
+                }
+            }, 800);
+        }
+
+        // Add sparkle animation
+        const sparkleAnimation = `
+            @keyframes sparkle {
+                0% { transform: scale(0) rotate(0deg); opacity: 1; }
+                50% { transform: scale(1.5) rotate(180deg); opacity: 0.8; }
+                100% { transform: scale(0) rotate(360deg); opacity: 0; }
+            }
+        `;
+        
+        const style = document.createElement('style');
+        style.textContent = sparkleAnimation;
+        document.head.appendChild(style);
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
