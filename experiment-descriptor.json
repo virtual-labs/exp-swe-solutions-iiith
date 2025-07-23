@@ -37,7 +37,7 @@
     },
     {
       "target": "simulation.html",
-      "source": "simulation/index.html",
+      "source": "simulation/main/html/index.html",
       "label": "Simulation",
       "unit-type": "task",
       "content-type": "simulation",
@@ -49,6 +49,14 @@
       "label": "Posttest",
       "unit-type": "task",
       "content-type": "assesment"
+    },
+    {
+      "target": "didyouknow.html",
+      "source": "simulation/didyouknow.html",
+      "label": "Fact Vault",
+      "unit-type": "task",
+      "content-type": "simulation",
+      "additional-sources": []
     },
     {
       "target": "references.html",

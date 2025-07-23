@@ -1,90 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. Explain the difference between an infinite potential well and a finite potential well.",
-            "answers": {
-                "a": "An infinite potential well has infinite energy levels, while a finite potential well has finite energy levels.",
-                "b": "An infinite potential well has infinitely high walls, while a finite potential well has walls with finite height.",
-                "c": "An infinite potential well has a continuous spectrum of energy, while a finite potential well has a discrete spectrum.",
-                "d": "An infinite potential well has zero probability of finding a particle outside the well, while a finite potential well has non-zero probability."
-            },
-            "explanations": {
-                "a": "This is incorrect because both infinite and finite potential wells have discrete energy levels. The key difference lies in the height of the potential walls, not the number of energy levels.",
-                "b": "This is correct. An infinite potential well has walls with infinite height, meaning the particle cannot escape. A finite potential well has walls with finite height, allowing for the possibility of the particle tunneling outside the well.",
-                "c": "This is incorrect. Both infinite and finite potential wells have discrete energy levels. The difference is in the height of the potential walls, not the nature of the energy spectrum.",
-                "d": "This is partially correct but not the best answer. While it is true that a particle in an infinite potential well cannot be found outside the well, the primary difference lies in the height of the potential walls."
-            },
-            "correctAnswer": "b",
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. For an electron in an infinite potential well of width $L$, calculate the energy of the second excited state ($n=3$).",
-            "answers": {
-                "a": "$E = \\frac{9\\pi^2\\hbar^2}{2mL^2}$",
-                "b": "$E = \\frac{6\\pi^2\\hbar^2}{mL^2}$",
-                "c": "$E = \\frac{3\\pi\\hbar}{mL}$",
-                "d": "$E = \\frac{9\\pi\\hbar^2}{2mL}$"
-            },
-            "explanations": {
-                "a": "This is correct. The energy levels in an infinite potential well are given by $E_n = \\frac{n^2\\pi^2\\hbar^2}{2mL^2}$. For $n=3$, the energy is $E = \\frac{9\\pi^2\\hbar^2}{2mL^2}$.",
-                "b": "This is incorrect. The formula used here is incorrect because it does not match the standard formula for energy levels in an infinite potential well.",
-                "c": "This is incorrect. The formula used here is incorrect because it does not match the standard formula for energy levels in an infinite potential well.",
-                "d": "This is incorrect. The formula used here is incorrect because it does not match the standard formula for energy levels in an infinite potential well."
-            },
-            "correctAnswer": "a",
-            "difficulty": "advanced"
-        },
-        {
-            "question": "3. What does the square of the wave function (|ψ|^2) represent in the context of quantum mechanics?",
-            "answers": {
-                "a": "The velocity of the particle.",
-                "b": "The energy of the particle.",
-                "c": "The probability density of finding the particle at a given position.",
-                "d": "The force acting on the particle."
-            },
-            "explanations": {
-                "a": "This is incorrect. The square of the wave function does not represent the velocity of the particle.",
-                "b": "This is incorrect. The square of the wave function does not represent the energy of the particle.",
-                "c": "This is correct. The square of the wave function (|ψ|^2) represents the probability density of finding the particle at a given position.",
-                "d": "This is incorrect. The square of the wave function does not represent the force acting on the particle."
-            },
-            "correctAnswer": "c",
-            "difficulty": "beginner"
-        },
-        {
-            "question": "4. Given the wave function $\\psi(x) = \\sqrt{2/L} \\sin\\left(\\frac{n\\pi x}{L}\\right)$ for a particle in an infinite potential well, what is the probability of finding the particle in the first quarter of the well (0 to $L/4$) for the ground state ($n=1$)?",
-            "answers": {
-                "a": "<0.25",
-                "b": "=0.5",
-                "c": "<0.5",
-                "d": "1"
-            },
-            "explanations": {
-                "a": "This is incorrect. The probability of finding the particle in the first quarter of the well is not less than 0.25.",
-                "b": "This is incorrect. The probability of finding the particle in the first quarter of the well is not exactly 0.5.",
-                "c": "This is correct. The probability of finding the particle in the first quarter of the well is less than 0.5 because the wave function is not uniformly distributed.",
-                "d": "This is incorrect. The probability of finding the particle in the first quarter of the well is not 1."
-            },
-            "correctAnswer": "c",
-            "difficulty": "advanced"
-        },
-        {
-            "question": "5. Which of these cannot be best explained using SWE (Schrödinger Wave Equation)?",
-            "answers": {
-                "a": "Electron cloud around atoms.",
-                "b": "Hole moving in silicon lattice",
-                "c": "Quantum dot",
-                "d": "motion of planets around star"
-            },
-            "explanations": {
-                "a": "This is incorrect. The electron cloud around atoms is best explained using the Schrödinger Wave Equation.",
-                "b": "This is incorrect. The motion of holes in a silicon lattice can be described using quantum mechanics, which includes the Schrödinger Wave Equation.",
-                "c": "This is incorrect. Quantum dots are systems where the Schrödinger Wave Equation is used to describe the behavior of electrons.",
-                "d": "This is correct. The motion of planets around a star is best explained using classical mechanics (Newton's laws of motion and gravitation), not the Schrödinger Wave Equation."
-            },
-            "correctAnswer": "d",
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. For an electron in a 1D infinite potential well of width L, which energy levels are allowed?",
+      "answers": {
+        "a": "E = 0 only",
+        "b": "Any continuous value of E",
+        "c": "E = n²π²ħ² / (2mL²), where n is an integer",
+        "d": "E = mgh"
+      },
+      "explanations": {
+        "a": "Incorrect. E = 0 is not an allowed energy level.",
+        "b": "Incorrect. Energy levels are quantized.",
+        "c": "Correct. These are the quantized energy levels in a 1D infinite potential well.",
+        "d": "Incorrect. That’s from classical mechanics."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following affects the number of bound states in a finite potential well?",
+      "answers": {
+        "a": "The shape of the wavefunction",
+        "b": "The depth and width of the potential well",
+        "c": "The mass of the observer",
+        "d": "The time of observation"
+      },
+      "explanations": {
+        "a": "Incorrect. Shape is a result, not a cause.",
+        "b": "Correct. Deeper and wider wells can support more bound states.",
+        "c": "Incorrect. The observer’s mass is irrelevant.",
+        "d": "Incorrect. This is a time-independent case."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The wavefunction of a particle in an infinite well of width L is zero at:",
+      "answers": {
+        "a": "x = 0 and x = L only",
+        "b": "At multiple discrete points inside the well",
+        "c": "Everywhere inside the well",
+        "d": "No point at all"
+      },
+      "explanations": {
+        "a": "Correct. The boundary condition for an infinite potential well is that the wavefunction is zero at the walls.",
+        "b": "Incorrect. It has nodes inside, but always zero at walls.",
+        "c": "Incorrect. Probability is not zero inside.",
+        "d": "Incorrect. Wavefunction is zero at boundaries."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What does the square of the wave function ψ(x) represent in quantum mechanics?",
+      "answers": {
+        "a": "Electric field strength",
+        "b": "Probability density of finding the particle at x",
+        "c": "Potential energy at position x",
+        "d": "Total energy of the system"
+      },
+      "explanations": {
+        "a": "Incorrect. That’s not from quantum mechanics.",
+        "b": "Correct. |ψ(x)|² gives the probability density.",
+        "c": "Incorrect. Potential is part of the Hamiltonian.",
+        "d": "Incorrect. Total energy is derived from the Schrödinger equation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. In a finite potential well, what happens to the wavefunction outside the well?",
+      "answers": {
+        "a": "It abruptly becomes zero",
+        "b": "It grows exponentially",
+        "c": "It decays exponentially",
+        "d": "It oscillates indefinitely"
+      },
+      "explanations": {
+        "a": "Incorrect. That happens in an infinite well.",
+        "b": "Incorrect. It doesn't grow without bound.",
+        "c": "Correct. It decays exponentially in classically forbidden regions.",
+        "d": "Incorrect. Oscillation happens only inside the well."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Why are only discrete energy levels allowed in an infinite potential well?",
+      "answers": {
+        "a": "Because of wave interference at the walls",
+        "b": "Because electrons prefer certain energies",
+        "c": "Due to thermal equilibrium",
+        "d": "Because quantum mechanics breaks down at the nanoscale"
+      },
+      "explanations": {
+        "a": "Correct. Boundary conditions force standing wave solutions, allowing only specific wavelengths and energies.",
+        "b": "Incorrect. That’s not a quantum mechanical principle.",
+        "c": "Incorrect. Thermal effects don’t explain quantization here.",
+        "d": "Incorrect. Quantum mechanics is especially useful at small scales."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. The momentum of a particle in an infinite potential well is most closely related to:",
+      "answers": {
+        "a": "The width of the well and quantum number n",
+        "b": "The potential barrier height",
+        "c": "The mass of the observer",
+        "d": "The charge of the particle"
+      },
+      "explanations": {
+        "a": "Correct. Momentum is quantized and depends on well width and energy levels (n).",
+        "b": "Incorrect. In an infinite well, height is not finite.",
+        "c": "Incorrect. Observer mass is irrelevant.",
+        "d": "Incorrect. Charge is not related to momentum quantization."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. How does increasing the width of an infinite potential well affect the energy levels?",
+      "answers": {
+        "a": "Energy levels remain the same",
+        "b": "Energy levels become more closely spaced",
+        "c": "Energy levels become more widely spaced",
+        "d": "It has no effect on the energy levels"
+      },
+      "explanations": {
+        "a": "Incorrect. Width affects energy spacing.",
+        "b": "Correct. Larger width → lower energy → closer spacing.",
+        "c": "Incorrect. Opposite happens.",
+        "d": "Incorrect. Energy depends on L."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Why does quantum tunneling occur in a finite potential well?",
+      "answers": {
+        "a": "Because classical mechanics allows it",
+        "b": "Because the particle can gain energy temporarily",
+        "c": "Because the wavefunction is nonzero in classically forbidden regions",
+        "d": "Because particles travel faster than light"
+      },
+      "explanations": {
+        "a": "Incorrect. Classical mechanics forbids it.",
+        "b": "Incorrect. No energy gain is involved.",
+        "c": "Correct. The wavefunction decays but remains nonzero, allowing tunneling.",
+        "d": "Incorrect. Tunneling is not faster-than-light motion."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
 }
