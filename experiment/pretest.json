@@ -1,111 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the wave function (ψ) in quantum mechanics?",
-            "answers": {
-                "a": "A function that describes the shape of an electron's location.",
-                "b": "A function that gives the probability of finding the particle.",
-                "c": "A function that describes the energy levels of an atom.",
-                "d": "A function that gives the velocity of a particle."
-            },
-            "explanations": {
-                "a": "No, Can we know exact location of the electron??",
-                "b": "Correct",
-                "c": "No, wavefunction does not define the energy alone.",
-                "d": "Nope, go back to theory."
-              },
-            "correctAnswer": "b",
-            "difficulty": "beginner"
-        },
-        {
-          "question": "2. What are the allowed energy levels in the solution for a particle in a one-dimensional infinite potential well of width $L$? What are the allowed energy levels?",
-          "answers": {
-            "a": "$E_n = \\frac{n^2 h^2}{2mL^2}$",
-            "b": "$E_n = \\frac{n^2 \\pi^2 \\hbar^2}{2mL^2}$",
-            "c": "$E_n = \\frac{n \\hbar}{2mL}$",
-            "d": "$E_n = \\frac{n^2 h}{mL^2}$"
-          },
-        
-            "explanations": {
-                "a": "See the equation in the theory",
-                "b": "Correct",
-                "c": "See the equation in the theory",
-                "d": "See the equation in the theory"
-              },
-            "correctAnswer": "b",
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "3. Which of the following describes a finite potential well?",
-            "answers": {
-                "a": "A potential well with infinitely high walls.",
-                "b": "A potential well with finite energy outside the well.",
-                "c": "A potential that is zero everywhere.",
-                "d": "A potential well with finite depth and width."
-            },
-            "explanations": {
-                "a": "No, thats an infinite potential well.",
-                "b": "Correct",
-                "c": "No, Shouldn’t then particle be like free energy particle?",
-                "d": "Not necessarily"
-              },
-            "correctAnswer": "b",
-            "difficulty": "intermediate"
-        },
-        {
-          "question": "4. Calculate the probability of finding a particle in a specific region within an infinite potential well if the wave function is given by $\\psi(x) = \\sqrt{\\frac{2}{L}} \\sin\\left(\\frac{n\\pi x}{L}\\right)$. Assume $n = 1$ and $L = 1$.",
-          "answers": {
-            "a": "$1$",
-            "b": "$0.5$",
-            "c": "$0.75$",
-            "d": "$0.25$"
-          },
-        
-            "explanations": {
-              "a": "True, particle has to exist within the given limits",
-              "b": "No, where will particle exist?",
-              "c": "No, where will particle exist?",
-              "d": "No, where will particle exist?"
-            },
-            "correctAnswer": "a",
-            "difficulty": "advanced"
-          },
-          
-        {
-            "question": "5. In a system which is invert of 1D finite potential well (i.e. system potential barrier V(x) exists, between x=0 and x=L and particle is free in  all other regions (x<0 and x>L). If particle is located in x<0 and moving towards x=0, what will be characteristics of SWE solution (wavefunction) is the barrier and in the free space?",
-            "answers": {
-                "a": "Particle has a sinusoidal wave function every where",
-                "b": "Particle has a decaying wave function everywhere",
-                "c": "Particle cannot exist in this system",
-                "d": "Particle wavefunction is sinusoidal in x<=0 and x>=L and decays exponentially 0<x<L"
-            },
-            "explanations": {
-                "a": "When E<V(x), solution is not sinusoidal",
-                "b": "Wave function cannot be decaying in free space",
-                "c": "No, recall boundary conditions",
-                "d": "Yes, this is called tunneling. particle is found on other side of the barrier with lower probability."
-              },
-            "correctAnswer": "d",
-            "difficulty": "beginner"
-        },
-          
-        {
-            "question": "6. For above system, which of the following will be true?",
-            "answers": {
-                "a": "Particle wave function should be zero for x>= L",
-                "b": "Particle wave function amplitude will increase for x>=L",
-                "c": "Particle will bounce back completely at x=0",
-                "d": "Larger the value of L, lower is the amplitude of wavfunction for x>=L"
-            },
-            "explanations": {
-                "a": "No, recall boundary conditions",
-                "b": "No revisit theory",
-                "c": "No, paritcle won’t bounce back with 100% probability.",
-                "d": "Yes, wider barrier L implies more decay in the barrier."
-              },
-            "correctAnswer": "d",
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What does the solution to the time-independent Schrödinger’s Wave Equation represent?",
+      "answers": {
+        "a": "The exact location of the electron",
+        "b": "The probability of locating the electron in space",
+        "c": "The velocity of the electron",
+        "d": "The total charge of the electron"
+      },
+      "explanations": {
+        "a": "Incorrect. Quantum mechanics doesn't provide the exact position, only probabilities.",
+        "b": "Correct. The square of the wave function gives the probability density of finding a particle.",
+        "c": "Incorrect. SWE solutions do not provide velocity directly.",
+        "d": "Incorrect. Charge is a constant and not derived from SWE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following best describes a finite potential well?",
+      "answers": {
+        "a": "A system where the particle is completely free",
+        "b": "A region where the potential energy is zero everywhere",
+        "c": "A confined region with finite potential barriers on either side",
+        "d": "A region with infinite walls on both sides"
+      },
+      "explanations": {
+        "a": "Incorrect. A free particle has no confining potential.",
+        "b": "Incorrect. Zero potential everywhere implies a free particle.",
+        "c": "Correct. A finite potential well allows for tunneling and bounded energy states.",
+        "d": "Incorrect. That's an infinite potential well."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In the infinite potential well problem, where is the probability of finding the particle zero?",
+      "answers": {
+        "a": "At the center of the well",
+        "b": "Outside the well",
+        "c": "Everywhere inside the well",
+        "d": "There is no zero probability point"
+      },
+      "explanations": {
+        "a": "Incorrect. The probability at the center is not necessarily zero.",
+        "b": "Correct. The wave function is zero outside an infinite potential well.",
+        "c": "Incorrect. The probability varies sinusoidally inside.",
+        "d": "Incorrect. It's zero outside and at nodes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What condition leads to discrete energy levels in a quantum well?",
+      "answers": {
+        "a": "Uniform electric field",
+        "b": "Boundary conditions on the wavefunction",
+        "c": "Thermal vibrations of the lattice",
+        "d": "Presence of photons"
+      },
+      "explanations": {
+        "a": "Incorrect. Field strength influences but doesn't cause quantization alone.",
+        "b": "Correct. Wavefunction must be zero at boundaries, leading to quantized solutions.",
+        "c": "Incorrect. Lattice vibrations influence scattering, not quantization.",
+        "d": "Incorrect. Photons are not responsible for energy quantization in this context."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. In quantum mechanics, which of the following is always true about a bound particle’s wavefunction?",
+      "answers": {
+        "a": "It is infinite everywhere",
+        "b": "It is discontinuous at the boundaries",
+        "c": "It is always real",
+        "d": "It is continuous and normalizable"
+      },
+      "explanations": {
+        "a": "Incorrect. It must be finite and square-integrable.",
+        "b": "Incorrect. Discontinuities are not physical.",
+        "c": "Incorrect. Wavefunctions can be complex-valued.",
+        "d": "Correct. Physical wavefunctions are continuous and normalizable."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which mathematical operation in the SWE leads to energy quantization?",
+      "answers": {
+        "a": "Squaring the wavefunction",
+        "b": "Differentiating the potential",
+        "c": "Applying boundary conditions",
+        "d": "Adding the kinetic and potential energy terms"
+      },
+      "explanations": {
+        "a": "Incorrect. Squaring yields probability, not energy.",
+        "b": "Incorrect. The SWE uses potential directly, not its derivative.",
+        "c": "Correct. Applying boundary conditions restricts allowed energy levels.",
+        "d": "Incorrect. That forms the Hamiltonian, not energy quantization."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. If a particle is in the second energy level (n=2) of an infinite potential well of width L, its energy is:",
+      "answers": {
+        "a": "Twice that of n=1",
+        "b": "Four times that of n=1",
+        "c": "Same as n=1",
+        "d": "Not quantized"
+      },
+      "explanations": {
+        "a": "Incorrect. Energy is proportional to n², not n.",
+        "b": "Correct. E ∝ n², so E₂ = 4E₁.",
+        "c": "Incorrect. Energy levels are distinct.",
+        "d": "Incorrect. Energy is quantized in the infinite well."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. What physical phenomenon allows a particle to be found outside a finite potential well?",
+      "answers": {
+        "a": "Superposition",
+        "b": "Decoherence",
+        "c": "Quantum tunneling",
+        "d": "Coulomb repulsion"
+      },
+      "explanations": {
+        "a": "Incorrect. Superposition doesn't imply tunneling.",
+        "b": "Incorrect. Decoherence relates to loss of quantum behavior.",
+        "c": "Correct. Tunneling allows the wavefunction to extend beyond the well.",
+        "d": "Incorrect. Coulomb force is unrelated here."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. What happens to the allowed energy levels in an infinite potential well as the width of the well increases?",
+      "answers": {
+        "a": "They increase",
+        "b": "They decrease",
+        "c": "They stay the same",
+        "d": "They become continuous"
+      },
+      "explanations": {
+        "a": "Incorrect. Increasing width lowers energy levels.",
+        "b": "Correct. Eₙ ∝ 1/L², so larger L → smaller energy.",
+        "c": "Incorrect. Energy is width-dependent.",
+        "d": "Incorrect. Levels remain discrete regardless of width."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
 }
