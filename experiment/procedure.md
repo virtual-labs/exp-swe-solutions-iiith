@@ -1,6 +1,12 @@
 # Procedure for Using the Quantum Wavefunction Virtual Lab Simulation
 
+<<<<<<< Updated upstream
 ## Task-1: Exploring Parameter Effects on Wavefunctions
+=======
+⭐ When you enter the simulation section, a guided tour will appear. It is strongly recommended that you take the tour, as it provides step-by-step instructions to help you understand the experiment thoroughly. The tour also introduces you to the various controls, features, and interface elements, making it easier for you to navigate and explore the experiment effectively.
+
+### Task-1: Quantum Wavefunction Visualization and Potential Type Identification
+>>>>>>> Stashed changes
 
 - Use the controls panel to adjust parameters such as potential type, energy, and other quantum properties.
 - As you change these parameters, observe how the wavefunction plots update in real time.
