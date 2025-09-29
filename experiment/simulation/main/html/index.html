@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; style-src 'self' 'unsafe-inline' https: data:;">
     <title>Quantum Wavefunction Virtual Lab - Interactive Experiment</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/visualizer.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../css/visualizer.css">
     <style>
         /* Quantum Lab specific styles */
         * {
@@ -1655,8 +1656,26 @@
             </ul>
         </div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/threejs/r75/three.min.js"></script>
-    <script type="text/javascript" src="/js/visualize.min.js"></script>
+    <script type="text/javascript" src="../three.min.js" onerror="console.error('Failed to load THREE.js')"></script>
+    <script type="text/javascript" src="../js/visualize.min.js" onerror="console.error('Failed to load visualize.min.js')"></script>
+    
+    <!-- Safari compatibility script -->
+    <script>
+        // Safari-specific fixes
+        if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+            // Ensure WebGL context is available
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            if (!gl) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    const visContainer = document.getElementById('vis-container');
+                    if (visContainer) {
+                        visContainer.innerHTML = '<div style="color: red; padding: 20px; text-align: center;">WebGL is required but not supported in your Safari version. Please try Chrome or Firefox, or enable WebGL in Safari preferences.</div>';
+                    }
+                });
+            }
+        }
+    </script>
     
     <!-- Mobile Detection Script -->
     <script>
@@ -2083,14 +2102,10 @@
                     const energy_container = document.getElementById("energy-dragging-container");
                     const energy_dragger_prototype = document.getElementById("energy_dragger_prototype");
                     
-                    console.log('Initializing visualizer...', { vis_container, potential_container, energy_container });
-                    
                     try {
                         Vis = new visualizing.Visualizer(vis_container, potential_container, energy_container, energy_dragger_prototype);
                         Vis.loadSHO();
                         Vis.addEnergySlider();
-
-                        console.log('Visualizer initialized successfully');
 
                         // Setup rotator if ui is available
                         if (typeof ui !== 'undefined') {
