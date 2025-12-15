@@ -2,24 +2,26 @@
 In quantum mechanics, a small particle like electron, is known to exist both as a particle and as a wave (wave particle duality).
 The wave equation describes the movement of energy and is expressed in form of amplitude or energy with respect to location and time In quantum mechanics, the wave equation is known as the Schrödinger equation, which represents the probability of finding the particles in space.
 
+
 ## Schrödinger Wave Equation
-The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass  m  in a potential V(x) , the time-independent Schrödinger equation is given by equation 1.By using variable separation,location(x) and time t (t) can be separated out into Time independent SWE (equation 2) and time based equation with exponential solution as shown (equation 3).
+The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass $m$ in a potential $V(x)$, the time-independent Schrödinger equation is given by **Equation 1**. By using variable separation, location ($x$) and time ($t$) can be separated out into the time-independent SWE (**Equation 2**) and the time-based equation with exponential solution as shown (**Equation 3**).
 
+<img src="./simulation/images/eq1.png" width="300"><br>
+<div align="center"><b>Equation 1</b></div>
 
-<img src="./simulation/images/eq1.png" width="300"></img>
-<br>
+<img src="./simulation/images/equation2.png" width="300"><br>
+<div align="center"><b>Equation 2</b></div>
 
-Eq 2:  ![Equation 2:](./simulation/images/equation2.png)
-<br>
+<img src="./simulation/images/equation3.png" width="300"><br>
+<div align="center"><b>Equation 3</b></div>
 
-![Equation 3:](./simulation/images/equation3.png)
+<img src="./simulation/images/equation3_a.png" width="300"><br>
+<div align="center"><b>Equation 4</b></div>
 
-Eq 3:  ![](./simulation/images/equation3_a.png)
- 
- Wave function is finite. If wave function is ψ(x) then at x = −∞ and x = +∞, ψ(x) = 0. 
- ψ(x) must be continuous across all boundaries. No discontinuity can exist
- The derivative ∂ψ(x)/∂x must be continuous also. 
- The wave function must be zero where system potential V(x) is infinity. 
+The wave function is finite. If wave function is $\psi(x)$ then at $x = -\infty$ and $x = +\infty$, $\psi(x) = 0$.
+$\psi(x)$ must be continuous across all boundaries. No discontinuity can exist.
+The derivative $\partial\psi(x)/\partial x$ must be continuous also.
+The wave function must be zero where system potential $V(x)$ is infinity.
 
 
 
@@ -42,21 +44,21 @@ location (x, y, z in 3D) and time (t).
 
 In free space,particle is free to move around in space as particle energy is much higher than system potential.
 Consider the simple 1D case, where particle exists freely and system potential is
- V(x) =0
+ $V(x) = 0$
 <br>
-![](./simulation/images/eq2.png)
-
-<br>
-The solution to this SWE is given by equation 4 which is simplified to equation 5. With system boundary conditions,
-we see that the quantized wave solution to this is represented by equation 6 and allowed energy levels by equation7
+<img src="./simulation/images/eq2.png" width="300"><br>
+<div align="center"><b>Equation 5</b></div>
 
 <br>
+The solution to this SWE is given by **Equation 6**, which is simplified to **Equation 7**. With system boundary conditions, we see that the quantized wave solution to this is represented by **Equation 8** and allowed energy levels by **Equation 9**.
 
-Eq 4:    ![Equation 4 :](./simulation/images/equation4.png)
+<br>
 
+<img src="./simulation/images/equation4.png" width="300"><br>
+<div align="center"><b>Equation 6</b></div>
 
-Eq 5:    ![Equation 5:](./simulation/images/equation5.png)
-
+<img src="./simulation/images/equation5.png" width="300"><br>
+<div align="center"><b>Equation 7</b></div>
 <br>
 <br>
 Free Space  Example :Electron gun 
@@ -64,31 +66,31 @@ Free Space  Example :Electron gun
 
 Consider an electron gun that emits electrons with a certain energy, These electrons can be described by a wave function, and their behavior can be analyzed using the Schrödinger equation. In a region with no potential (free space), away from the influence source of Gun & before they get under the potential the anode, the electrons will exhibit wave-like properties.
 
+
 ## Infinite Potential Well
 
-In an infinite potential well, the system potential  V(x)  is zero inside the well (similar to free space), but, infinite at and outside the well walls. This creates boundary conditions : the wave function is zero and outside beyond the walls of the well. The solution in the well is sinusoidal (equation 5) given in standing waves(like flute), and with quantized solution modes (equation 6) and with allowed energy level as shown in equation 7:
-where  L  is the width of the well and  n is a positive integer.
+In an infinite potential well, the system potential $V(x)$ is zero inside the well (similar to free space), but infinite at and outside the well walls. This creates boundary conditions: the wave function is zero at and beyond the walls of the well. The solution in the well is sinusoidal (**Equation 7**) given in standing waves (like a flute), and with quantized solution modes (**Equation 8**) and with allowed energy level as shown in **Equation 9**:
+where $L$ is the width of the well and $n$ is a positive integer.
 <br>
 
-Eq 6:   ![Equation 5:](./simulation/images/equation5.png)
+<img src="./simulation/images/equation5.png" width="300"><br>
+<div align="center"><b>Equation 7</b></div>
 
+<img src="./simulation/images/equation6.png" width="300"><br>
+<div align="center"><b>Equation 8</b></div>
+
+<img src="./simulation/images/equation7.png" width="300"><br>
+<div align="center"><b>Equation 9</b></div>
 <br>
 
-Eq 7:   ![Equation 6:](./simulation/images/equation6.png)
-
-<br>
-
-Eq 8:   ![Equation 7:](./simulation/images/equation7.png)
-<br>
-<!-- <img src="./images/equation.png" width="400"> -->
 
 ## Finite Potential Well
-Finite potential well is potential well where the well boundaries are defined by potential greater than particle energy but finite.
-Inside the well, we again assume zero potential (like in Infinite potential well) and finite value V(x) at the boundary and beyond.
- The wave function inside the well is similar to that of the infinite well (i.e. free space solution), but outside the well, the wave function decays exponentially (see equatin 8: note exponent is a real number ) . The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
- <br>
+Finite potential well is a potential well where the well boundaries are defined by potential greater than particle energy but finite.
+Inside the well, we again assume zero potential (like in the infinite potential well) and finite value $V(x)$ at the boundary and beyond.
+The wave function inside the well is similar to that of the infinite well (i.e., free space solution), but outside the well, the wave function decays exponentially (see **Equation 10**: note exponent is a real number). The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
+<br>
 
-Eq 9: ![Equation 8:](./simulation/images/equation8.png)
-
+<img src="./simulation/images/equation8.png" width="300"><br>
+<div align="center"><b>Equation 10</b></div>
 <br>
 This normalization condition ensures that the particle exists somewhere in space.

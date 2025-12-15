@@ -1416,6 +1416,9 @@
                         <div>
                             <h3 class="challenge-title">Fill in the Blanks</h3>
                             <p class="challenge-description">Complete quantum mechanical equations and statements</p>
+                            <p class="challenge-description" style="font-size: 0.85rem; color: #6366f1; margin-top: 4px;">
+                                💡 Symbol tips: Use "pi" for π, "hbar" for ℏ, "h-bar" for ℏ, "^2" for squared (e.g., n^2)
+                            </p>
                         </div>
                     </div>
                     <div class="fill-blank-container">
@@ -1457,7 +1460,8 @@
                         Use: h = 6.626 × 10⁻³⁴ J·s, m_e = 9.109 × 10⁻³¹ kg</p>
                         <input type="number" class="control-input" id="calc1" placeholder="Energy in eV" step="0.01">
                         <div class="challenge-hint" id="calc1Hint">
-                            💡 Hint: E_n = n²π²ℏ²/(2mL²), convert to eV using 1 eV = 1.602 × 10⁻¹⁹ J
+                            💡 Hint: E_n = n²π²ℏ²/(2mL²), convert to eV using 1 eV = 1.602 × 10⁻¹⁹ J<br>
+                            Note: π = 3.14159..., ℏ = h/(2π) = 1.055 × 10⁻³⁴ J·s
                         </div>
                     </div>
                     <div class="quiz-question">
@@ -2502,6 +2506,8 @@
             generateRapidFireQuiz();
             generateAdvancedQuiz();
             updateChallengeStats();
+            // Shuffle matching descriptions so they're not aligned with concepts
+            shuffleMatchingDescriptions();
         }
 
         function selectRandomQuestions() {
@@ -2519,6 +2525,21 @@
                 [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
             }
             return shuffled;
+        }
+
+        function shuffleMatchingDescriptions() {
+            const matchingContainer = document.querySelector('#matchingContainer .matching-column:last-child');
+            if (!matchingContainer) return;
+            
+            const header = matchingContainer.querySelector('h4');
+            const items = Array.from(matchingContainer.querySelectorAll('.matching-item'));
+            
+            // Shuffle the items
+            const shuffled = shuffleArray(items);
+            
+            // Clear and re-append in shuffled order
+            items.forEach(item => item.remove());
+            shuffled.forEach(item => matchingContainer.appendChild(item));
         }
 
         function generateRapidFireQuiz() {
@@ -2675,9 +2696,9 @@
 
         function checkFillBlanks() {
             const answers = {
-                blank1: ['ĥ', 'h-bar', 'hamiltonian', 'ℏ∇²/(2m) + v'],
-                blank2: ['n²π²ℏ²/(2mL²)', 'n²h²/(8mL²)', 'n² π² ℏ² / (2mL²)'],
-                blank3: ['ℏ/2', 'h/4π', 'ℏ / 2'],
+                blank1: ['ĥ', 'h-bar', 'hbar', 'hamiltonian', 'ℏ∇²/(2m) + v', 'h^'],
+                blank2: ['n²π²ℏ²/(2mL²)', 'n²h²/(8mL²)', 'n² π² ℏ² / (2mL²)', 'n^2*pi^2*hbar^2/(2mL^2)', 'n^2 pi^2 hbar^2', 'n2pi2h2'],
+                blank3: ['ℏ/2', 'h/4π', 'ℏ / 2', 'hbar/2', 'h-bar/2', 'h/4pi'],
                 blank4: ['normalized', 'normalised', '1'],
                 blank5: ['less than', 'below', '<', 'smaller than']
             };
@@ -3422,6 +3443,8 @@
             if (challengeType === 'matching') {
                 selectedMatchingItems = [];
                 matchingPairs = {};
+                // Shuffle descriptions so they're not in the same order
+                shuffleMatchingDescriptions();
             }
             
             // Regenerate dynamic content with new random questions
@@ -3498,7 +3521,7 @@
             },
             {
                 title: "Exercise 3: Time Evolution",
-                content: "Click play ▶ to see time evolution. Add multiple energy levels with + button. Why does |ψ|² move with multiple energies but not with one?",
+                content: "Add multiple energy levels with + button. Why does |ψ|² move with multiple energies but not with one?",
                 target: ".measurements-section",
                 position: "left",
                 exercise: true,
@@ -3516,7 +3539,7 @@
                 title: "Exercise 5: Asymmetric Potentials",
                 content: "Load 'Stepped' potential. Compare asymmetric position wavefunction with its momentum distribution. What do you notice?",
                 target: ".potential-selector",
-                position: "bottom",
+                position: "left",
                 exercise: true,
                 task: "Compare symmetry in position vs momentum space"
             },
@@ -3524,7 +3547,7 @@
                 title: "Challenge Yourself!",
                 content: "Test your understanding with quantum mechanics questions in the Challenges tab.",
                 target: ".experiment-tabs button:nth-child(2)",
-                position: "bottom"
+                position: "left"
             },
             {
                 title: "Ready to Explore!",
