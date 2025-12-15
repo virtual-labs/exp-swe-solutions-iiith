@@ -6,16 +6,16 @@ The wave equation describes the movement of energy and is expressed in form of a
 ## Schrödinger Wave Equation
 The Schrödinger equation is a fundamental equation in quantum mechanics that describes how the quantum state of a physical system changes with time. For a particle of mass $m$ in a potential $V(x)$, the time-independent Schrödinger equation is given by **Equation 1**. By using variable separation, location ($x$) and time ($t$) can be separated out into the time-independent SWE (**Equation 2**) and the time-based equation with exponential solution as shown (**Equation 3**).
 
-<img src="./simulation/images/eq1.png" width="300"><br>
+$$-\frac{\hbar^2}{2m}\nabla^2\psi + V(x)\psi = E\psi$$
 <div align="center"><b>Equation 1</b></div>
 
-<img src="./simulation/images/equation2.png" width="300"><br>
+$$\frac{d^2\psi}{dx^2} + \frac{2m}{\hbar^2}[E - U(x)]\psi = 0$$
 <div align="center"><b>Equation 2</b></div>
 
-<img src="./simulation/images/equation3.png" width="300"><br>
+$$i\hbar\frac{\partial\Psi}{\partial t} = E\Psi$$
 <div align="center"><b>Equation 3</b></div>
 
-<img src="./simulation/images/equation3_a.png" width="300"><br>
+$$\Psi(x,t) = \psi(x)e^{-iEt/\hbar}$$
 <div align="center"><b>Equation 4</b></div>
 
 The wave function is finite. If wave function is $\psi(x)$ then at $x = -\infty$ and $x = +\infty$, $\psi(x) = 0$.
@@ -46,7 +46,7 @@ In free space,particle is free to move around in space as particle energy is muc
 Consider the simple 1D case, where particle exists freely and system potential is
  $V(x) = 0$
 <br>
-<img src="./simulation/images/eq2.png" width="300"><br>
+$$\frac{d^2\psi}{dx^2} + \frac{2mE}{\hbar^2}\psi = 0$$
 <div align="center"><b>Equation 5</b></div>
 
 <br>
@@ -54,10 +54,10 @@ The solution to this SWE is given by **Equation 6**, which is simplified to **Eq
 
 <br>
 
-<img src="./simulation/images/equation4.png" width="300"><br>
+$$\psi(x) = A\sin(kx) + B\cos(kx)$$
 <div align="center"><b>Equation 6</b></div>
 
-<img src="./simulation/images/equation5.png" width="300"><br>
+$$\psi_n(x) = \sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right)$$
 <div align="center"><b>Equation 7</b></div>
 <br>
 <br>
@@ -73,13 +73,13 @@ In an infinite potential well, the system potential $V(x)$ is zero inside the we
 where $L$ is the width of the well and $n$ is a positive integer.
 <br>
 
-<img src="./simulation/images/equation5.png" width="300"><br>
+$$\psi_n(x) = \sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right)$$
 <div align="center"><b>Equation 7</b></div>
 
-<img src="./simulation/images/equation6.png" width="300"><br>
+$$k_n = \frac{n\pi}{L}, \quad n = 1, 2, 3, ...$$
 <div align="center"><b>Equation 8</b></div>
 
-<img src="./simulation/images/equation7.png" width="300"><br>
+$$E_n = \frac{n^2\pi^2\hbar^2}{2mL^2}, \quad n = 1, 2, 3, ...$$
 <div align="center"><b>Equation 9</b></div>
 <br>
 
@@ -90,7 +90,7 @@ Inside the well, we again assume zero potential (like in the infinite potential 
 The wave function inside the well is similar to that of the infinite well (i.e., free space solution), but outside the well, the wave function decays exponentially (see **Equation 10**: note exponent is a real number). The energy levels are also quantized but differ from those of the infinite well due to the finite potential barriers.
 <br>
 
-<img src="./simulation/images/equation8.png" width="300"><br>
+$$\psi(x) = Ae^{-\kappa x} \text{ for } x > L/2, \quad \text{where } \kappa = \sqrt{\frac{2m(V_0-E)}{\hbar^2}}$$
 <div align="center"><b>Equation 10</b></div>
 <br>
 This normalization condition ensures that the particle exists somewhere in space.
