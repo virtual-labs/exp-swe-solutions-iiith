@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What does the solution to the time-independent Schrödinger’s Wave Equation represent?",
+      "answers": {
+        "a": "The exact location of the electron",
+        "b": "The probability of locating the electron in space",
+        "c": "The velocity of the electron",
+        "d": "The total charge of the electron"
+      },
+      "explanations": {
+        "a": "Incorrect. Quantum mechanics doesn't provide the exact position, only probabilities.",
+        "b": "Correct. The square of the wave function gives the probability density of finding a particle.",
+        "c": "Incorrect. SWE solutions do not provide velocity directly.",
+        "d": "Incorrect. Charge is a constant and not derived from SWE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following best describes a finite potential well?",
+      "answers": {
+        "a": "A system where the particle is completely free",
+        "b": "A region where the potential energy is zero everywhere",
+        "c": "A confined region with finite potential barriers on either side",
+        "d": "A region with infinite walls on both sides"
+      },
+      "explanations": {
+        "a": "Incorrect. A free particle has no confining potential.",
+        "b": "Incorrect. Zero potential everywhere implies a free particle.",
+        "c": "Correct. A finite potential well allows for tunneling and bounded energy states.",
+        "d": "Incorrect. That's an infinite potential well."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In the infinite potential well problem, where is the probability of finding the particle zero?",
+      "answers": {
+        "a": "At the center of the well",
+        "b": "Outside the well",
+        "c": "Everywhere inside the well",
+        "d": "There is no zero probability point"
+      },
+      "explanations": {
+        "a": "Incorrect. The probability at the center is not necessarily zero.",
+        "b": "Correct. The wave function is zero outside an infinite potential well.",
+        "c": "Incorrect. The probability varies sinusoidally inside.",
+        "d": "Incorrect. It's zero outside and at nodes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What condition leads to discrete energy levels in a quantum well?",
+      "answers": {
+        "a": "Uniform electric field",
+        "b": "Boundary conditions on the wavefunction",
+        "c": "Thermal vibrations of the lattice",
+        "d": "Presence of photons"
+      },
+      "explanations": {
+        "a": "Incorrect. Field strength influences but doesn't cause quantization alone.",
+        "b": "Correct. Wavefunction must be zero at boundaries, leading to quantized solutions.",
+        "c": "Incorrect. Lattice vibrations influence scattering, not quantization.",
+        "d": "Incorrect. Photons are not responsible for energy quantization in this context."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. In quantum mechanics, which of the following is always true about a bound particle’s wavefunction?",
+      "answers": {
+        "a": "It is infinite everywhere",
+        "b": "It is discontinuous at the boundaries",
+        "c": "It is always real",
+        "d": "It is continuous and normalizable"
+      },
+      "explanations": {
+        "a": "Incorrect. It must be finite and square-integrable.",
+        "b": "Incorrect. Discontinuities are not physical.",
+        "c": "Incorrect. Wavefunctions can be complex-valued.",
+        "d": "Correct. Physical wavefunctions are continuous and normalizable."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which mathematical operation in the SWE leads to energy quantization?",
+      "answers": {
+        "a": "Squaring the wavefunction",
+        "b": "Differentiating the potential",
+        "c": "Applying boundary conditions",
+        "d": "Adding the kinetic and potential energy terms"
+      },
+      "explanations": {
+        "a": "Incorrect. Squaring yields probability, not energy.",
+        "b": "Incorrect. The SWE uses potential directly, not its derivative.",
+        "c": "Correct. Applying boundary conditions restricts allowed energy levels.",
+        "d": "Incorrect. That forms the Hamiltonian, not energy quantization."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. If a particle is in the second energy level (n=2) of an infinite potential well of width L, its energy is:",
+      "answers": {
+        "a": "Twice that of n=1",
+        "b": "Four times that of n=1",
+        "c": "Same as n=1",
+        "d": "Not quantized"
+      },
+      "explanations": {
+        "a": "Incorrect. Energy is proportional to n², not n.",
+        "b": "Correct. E ∝ n², so E₂ = 4E₁.",
+        "c": "Incorrect. Energy levels are distinct.",
+        "d": "Incorrect. Energy is quantized in the infinite well."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. What physical phenomenon allows a particle to be found outside a finite potential well?",
+      "answers": {
+        "a": "Superposition",
+        "b": "Decoherence",
+        "c": "Quantum tunneling",
+        "d": "Coulomb repulsion"
+      },
+      "explanations": {
+        "a": "Incorrect. Superposition doesn't imply tunneling.",
+        "b": "Incorrect. Decoherence relates to loss of quantum behavior.",
+        "c": "Correct. Tunneling allows the wavefunction to extend beyond the well.",
+        "d": "Incorrect. Coulomb force is unrelated here."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. What happens to the allowed energy levels in an infinite potential well as the width of the well increases?",
+      "answers": {
+        "a": "They increase",
+        "b": "They decrease",
+        "c": "They stay the same",
+        "d": "They become continuous"
+      },
+      "explanations": {
+        "a": "Incorrect. Increasing width lowers energy levels.",
+        "b": "Correct. Eₙ ∝ 1/L², so larger L → smaller energy.",
+        "c": "Incorrect. Energy is width-dependent.",
+        "d": "Incorrect. Levels remain discrete regardless of width."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

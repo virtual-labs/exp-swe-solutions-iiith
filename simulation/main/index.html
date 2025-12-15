@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Web-based quantum physics visualizer for wavefunctions and the Schrödinger Equation">
+    <title>Wavefunction Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="css/introjs.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mods_introjs.css">
+    <link rel="stylesheet" type="text/css" href="css/visualizer.css">
+    <link rel="import" href="tutorial.html">
+</head>
+<body>
+    <!-- Visualizer -->
+    <div id="ui-and-tutorial-container" class="noselect">
+        <div id="ui-container">
+            <div id="ui-scale-target">
+                <div id="potential-dragging-container" class="h-draggers">
+                    <div id="potential_dragger" class="dragger">
+                        <div class="centerer">
+                            <div class="grip"></div>
+                            <div class="touch_event_target"></div>
+                            <div class="click_event_target"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="vis-container">
+                    <div id="draw-text" style="visibility: hidden">Draw</div>
+                </div><!-- Must have no whitespace here
+                --><div id="energy-dragging-container" class="v-draggers">
+                    <!-- Energy dragger prototype div -->
+                    <div class="dragger" id="energy_dragger_prototype" style="display: none">
+                        <div class="centerer">
+                            <div class="grip"></div>
+                            <div class="value_text">12345</div>
+                            <div class="touch_event_target"></div>
+                            <div class="click_event_target"></div>
+                        </div>
+                    </div>
+                </div><!-- Must have no whitespace here
+                --><div class="options noselect">
+                    <div class="menu-button-container">
+                        <button id="potential_chooser" class="menu-button"><span style="position: relative; top: 1px">V</span>
+                        </button>
+			            <div style="position: absolute; top:0px; left: 0px;height: 0px;">
+			                <ul class="menu">
+			                    <li class="menu-item" onClick="Vis.loadSHO()"><img alt="" src="img/simple_harmonic_oscillator.svg" />Simple Harmonic Oscillator</li>
+			                    <li class="menu-item" onClick="Vis.loadISW()"><img alt="" src="img/infinite_square_well.svg" />Infinite Square Well</li>
+			                    <li class="menu-item" onClick="Vis.loadFSW()"><img alt="" src="img/finite_square_well.svg" />Finite Square Well</li>
+			                    <li class="menu-item" onClick="Vis.load2SW()"><img alt="" src="img/two_square_wells.svg" />Two Square Wells</li>
+			                    <li class="menu-item" onClick="Vis.loadSteppedSW()"><img alt="" src="img/stepped_square_well.svg" />Stepped Square Well</li>
+			                    <li class="menu-item" onClick="Vis.loadRandomPotential()"><span class="glyph">?</span>Random</li>
+			                    <li class="menu-item" onClick="Vis.sketchPotential()"><span class="glyph">&#x270E;</span>Your Sketch</li>
+			                </ul>
+			            </div>
+                    </div>
+                    <div class="option-item separator"></div>
+                    <div id="psi_container">
+                        <input type="checkbox" id="check_psi" name="psi" onClick="togglePsi(this)" checked /><label for="check_psi"
+                            class="first-after-sep"><i>&psi;</i></label><input type="checkbox" id="check_psiAbs" name="psiAbs"
+                            onClick="togglePsiAbs(this)" /><label for="check_psiAbs">|<i>&psi;</i>|<sup>2</sup></label>
+                    </div>
+                    <div id="phi-container">
+                        <input type="checkbox" id="check_phi" name="phi" onClick="togglePhi(this)" /><label for="check_phi"
+                            class="first-after-sep"><i>&phi;</i></label><input type="checkbox" id="check_phiAbs" name="phiAbs"
+                            onClick="togglePhiAbs(this)" /><label for="check_phiAbs">|<i>&phi;</i>|<sup>2</sup></label>
+                    </div>
+                    <div class="option-item separator"></div>
+                    <input type="checkbox" id="check_paused" name="paused" onClick="togglePaused(this)" checked />
+                    <label
+                        for="check_paused" class="first-after-sep"><span class="playpause">&#x25B6;&#xFE0E;<!-- FE0E prevents emoji --></span></label>
+
+                        <div class="option-item spacer"></div>
+
+                        <div id="rotator" class="option-item noselect">
+                            <div id="rotator_knob"></div>
+                        </div>
+                        <div id="energy_buttons">
+                            <button class="square-button" onClick="Vis.addEnergySlider()"><div>+</div></button>
+                            <button class="square-button" onClick="Vis.removeEnergySlider()"><div>-</div></button>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="tut-container">
+            <!--<iframe id="tut_iframe" src="tutorial.html"></iframe>-->
+            <div id="tutorial-receiver"></div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/intro.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/threejs/r75/three.min.js"></script>
+    <script type="text/javascript" src="js/visualize.min.js"></script>
+    <script>
+        ui.setupRotatorKnob(document.getElementById("rotator"),
+                            function(rads) { Vis.setRotation(rads) }
+        )
+        
+        var vis_container = document.getElementById("vis-container")
+        var potential_container = document.getElementById("potential_dragger")
+        var energy_container = document.getElementById("energy-dragging-container")
+        var energy_dragger_prototype = document.getElementById("energy_dragger_prototype")
+        
+        var Vis = new visualizing.Visualizer(vis_container, potential_container, energy_container, energy_dragger_prototype)
+        Vis.loadSHO()
+        Vis.addEnergySlider()
+
+        function togglePsi(cb) { Vis.setShowPsi(cb.checked) }
+        function togglePsiAbs(cb) { Vis.setShowPsiAbs(cb.checked) }
+        function togglePhi(cb) { Vis.setShowPhi(cb.checked) }
+        function togglePhiAbs(cb) { Vis.setShowPhiAbs(cb.checked) }
+
+        function togglePaused(cb) { Vis.setPaused(!cb.checked) }
+
+        function tryExercises() {
+            tour.stop()
+            window.location.hash = "#exercises";
+        }
+
+        window.addEventListener('message', function(evt) {
+            if (evt.data === 'start-tour') {
+                tour.start()
+            }
+        })
+
+        window.addEventListener("resize", ui.resizeToFitWindowHeight)
+        window.addEventListener("orientationchange", ui.resizeToFitWindowHeight)
+        ui.resizeToFitWindowHeight()
+
+        window.addEventListener('HTMLImportsLoaded', function() {
+            var content = document.querySelector('link[rel="import"]').import
+            var el = content.getElementById('tutorial-content')
+            document.getElementById('tutorial-receiver').appendChild(el.cloneNode(true))
+        })
+        </script>
+        <script src="js/HTMLImports.min.js"></script>
+</body>
+
+</html>
