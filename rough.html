@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Well Simulation</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .canvas-section {
+            display: none;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        canvas {
+            width: 100%;
+            height: auto;
+            max-width: 700px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h2>Quantum Well Simulation</h2>
+<div id="canvas0">
+    <button onclick="navNext1a()">Start Infinite Potential Well Experiment</button>
+</div>
+
+<div id="canvas1b" class="canvas-section">
+    <p>Input the value of n (Quantum Number):</p>
+    <input type="text" id="w1" oninput="validateInput()">
+    <button onclick="plotWaveFunction()">Plot ψ(x)</button>
+    <canvas id="waveChart"></canvas>
+    <button onclick="navNext2()">Next to Finite Potential Well</button>
+</div>
+
+<div id="canvas2" class="canvas-section">
+    <p>Finite Potential Well Simulation</p>
+    <p>Input the value of n, L, and Potential:</p>
+    <input type="text" id="nFinite" placeholder="Quantum Number n">
+    <input type="text" id="LFinite" placeholder="Length L">
+    <input type="text" id="VFinite" placeholder="Potential V">
+    <button onclick="plotFiniteWell()">Plot ψ(x)</button>
+    <canvas id="finiteWaveChart"></canvas>
+</div>
+
+<script>
+function navNext1a() {
+    document.getElementById("canvas0").style.display = "none";
+    document.getElementById("canvas1b").style.display = "block";
+}
+
+function navNext2() {
+    document.getElementById("canvas1b").style.display = "none";
+    document.getElementById("canvas2").style.display = "block";
+}
+
+function validateInput() {
+    let input = document.getElementById("w1");
+    let value = input.value;
+    if (!/^[1-9]\d*$/.test(value)) {
+        alert("Please enter a positive integer");
+        input.value = '';
+    }
+}
+
+function plotWaveFunction() {
+    let n = parseInt(document.getElementById("w1").value);
+    if (isNaN(n) || n <= 0) {
+        alert("Please enter a valid positive integer");
+        return;
+    }
+
+    const ctx = document.getElementById("waveChart").getContext("2d");
+    const L = 1;
+    const points = 100;
+    let x = [], y = [];
+
+    for (let i = 0; i <= points; i++) {
+        let xi = (i / points) * L;
+        x.push(xi.toFixed(2));
+        y.push(Math.sin((n * Math.PI * xi) / L));
+    }
+
+    if (window.waveChartInstance) {
+        window.waveChartInstance.destroy();
+    }
+
+    window.waveChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: x,
+            datasets: [{
+                label: `ψ(x) for n = ${n}`,
+                data: y,
+                borderColor: '#3498db',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+                x: {
+                    title: { display: true, text: 'x (Length)' }
+                },
+                y: {
+                    title: { display: true, text: 'ψ(x)' }
+                }
+            }
+        }
+    });
+}
+
+function plotFiniteWell() {
+    let n = parseInt(document.getElementById("nFinite").value);
+    let L = parseFloat(document.getElementById("LFinite").value);
+    let V = parseFloat(document.getElementById("VFinite").value);
+
+    if (isNaN(n) || n <= 0 || isNaN(L) || L <= 0 || isNaN(V) || V <= 0) {
+        alert("Please enter valid positive numbers");
+        return;
+    }
+
+    const ctx = document.getElementById("finiteWaveChart").getContext("2d");
+    const points = 100;
+    let x = [], y = [];
+
+    for (let i = 0; i <= points; i++) {
+        let xi = (i / points) * L;
+        x.push(xi.toFixed(2));
+        y.push(Math.exp(-V * xi) * Math.sin((n * Math.PI * xi) / L));
+    }
+
+    if (window.finiteWaveChartInstance) {
+        window.finiteWaveChartInstance.destroy();
+    }
+
+    window.finiteWaveChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: x,
+            datasets: [{
+                label: `ψ(x) for n = ${n}, V = ${V}`,
+                data: y,
+                borderColor: '#e74c3c',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+                x: {
+                    title: { display: true, text: 'x (Length)' }
+                },
+                y: {
+                    title: { display: true, text: 'ψ(x)' }
+                }
+            }
+        }
+    });
+}
+</script>
+</body>
+</html>

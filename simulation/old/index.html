@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 1</title>
+    
+
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquerymin.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"type="text/css">
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="iitstyle.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script language="javascript" type="text/javascript" src="t/excanvas.js"></script>
+    <script language="javascript" type="text/javascript" src="t/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="t/jquery.flot.js"></script>
+    <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+    var simsubscreennum=0;
+
+    var temp=0;  
+</script>
+
+</head>
+
+<body style="margin-top: 40px; font-family: verdana;" >
+<table align="center">
+<tr><td>
+<div id="simscreen">
+
+    <div id="title"><h3><strong>Infinite and Finite Well and other SWE solutions</strong></h3></div>
+
+<!-- //////////////////////////////Scene 0 ///////////////////////-->
+<div class="simsubscreen" id="canvas0" style="visibility: visible; width: 700px; margin-right: 50px; margin-left: 50px;">
+    <div id="transis" style="
+        width: 700px;
+        height: auto; /* Adjust height to fit content */
+        margin-right: 27px;
+        margin-left: 1px;
+        padding: 20px;">
+        
+        <!-- First Question -->
+        <p class="incanvas" style="font-size:14px;"><strong>Question 1: How many nodes (just like nodes in windpipe ) will you see in the solution for quantum number =5 inside infinite well? </strong></p>
+        <p class="incanvas" style="font-size:14px;">?</p>
+        
+        <form id="mcqForm1">
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq1" value="A"> 
+                A) 3
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq1" value="B"> 
+                B) 6
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq1" value="C"> 
+                C) 5
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq1" value="D"> 
+                D)4
+            </label>
+        </form>
+
+        <!-- Second Question -->
+        <p class="incanvas" style="font-size:14px; margin-top: 30px;"><strong>Question 2:</strong></p>
+        <p class="incanvas" style="font-size:14px;">Between n=2 and n=4 energy level for which quantum number will be higher?</p>
+        
+        <form id="mcqForm2">
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq2" value="A"> 
+                A) 2
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq2" value="B"> 
+                B) 3
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq2" value="C"> 
+                C) 4
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq2" value="D"> 
+                D) both are same.
+            </label>
+        </form>
+
+        <!-- Submit Button -->
+        <button id="submitButton" style="margin-top: 20px; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="checkAnswers()">Submit</button>
+        
+        <!-- Feedback -->
+        <p id="feedback1" style="font-size:14px; margin-top: 10px; color: green;"></p>
+        <p id="feedback2" style="font-size:14px; margin-top: 10px; color: green;"></p>
+    </div>
+
+    <span class="blink_me" id="arrowcubox" style="position:absolute; font-size: 30px; left: 535px; top: 500px; color: #2150a0;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+    <input type="button" id="nextButton0" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; display: none;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1a()"/>
+</div>
+
+<script>
+    function checkAnswers() {
+        let allCorrect = true;
+
+        // Check first question
+        const selectedAnswer1 = document.querySelector('input[name="mcq1"]:checked');
+        const feedback1 = document.getElementById('feedback1');
+
+        if (selectedAnswer1) {
+            if (selectedAnswer1.value === "B") {
+                feedback1.textContent = "Correct!";
+                feedback1.style.color = "green";
+            } else {
+                feedback1.textContent = "Incorrect. Check again.";
+                feedback1.style.color = "red";
+                allCorrect = false;
+            }
+        } else {
+            feedback1.textContent = "Please select an answer for Question 1.";
+            feedback1.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Check second question
+        const selectedAnswer2 = document.querySelector('input[name="mcq2"]:checked');
+        const feedback2 = document.getElementById('feedback2');
+
+        if (selectedAnswer2) {
+            if (selectedAnswer2.value === "C") {
+                feedback2.textContent = "Correct!";
+                feedback2.style.color = "green";
+            } else {
+                feedback2.textContent = "Incorrect. Check relation between energy and quantum number.";
+                feedback2.style.color = "red";
+                allCorrect = false;
+            }
+        } else {
+            feedback2.textContent = "Please select an answer for Question 2.";
+            feedback2.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Show the "Start Experiment" button if all answers are correct
+        const nextButton = document.getElementById('nextButton0');
+        if (allCorrect) {
+            nextButton.style.display = "inline-block"; // Reveal the button
+        } else {
+            nextButton.style.display = "none"; // Hide the button
+        }
+    }
+</script>
+
+<!-- ///////////////////////////Intro Page complete//////////////////////////////--> 
+
+  
+
+
+  
+
+ 
+<!-------------BACKGROUND IMAGE AND STYLE ------------->
+<div class="simsubscreen" id="canvas1" style="visibility: hidden; background: url(images/);" ></br>
+    <div id="btn_btn" style="width: 750px;
+        height: 41px;
+        margin-left: 23px;
+        position: absolute;
+        top: 26px;
+        border: 2px solid #1b1c1d;
+        font-size: 17px;
+        padding-top: 13px;
+        padding-left: 15px;
+        padding-top: 5px;
+        background-color: rgb(255, 255, 255, 0.6);">
+    <!--arrow1  -->
+<span class="blink_me" id="arw1" style="
+position: absolute;
+font-size: 30px;
+left: 631px;
+top: -2px;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+<input type="button" id="add_stand" style="position: absolute;
+left: 668px;
+top: 3px;
+cursor: pointer;
+font-size: 15px;
+padding: 3px;
+background-color: #2150a0;
+color: white;" value="&nbsp;Bring&nbsp;" onclick="add_stand()"/>
+
+<!--start analysis button  -->
+<input type="button" id="start_Analysis1" style="position:absolute; visibility: hidden; border-radius: 12px; left: 620px; top: 480px; cursor:pointer; font-size: 15px; background-color: #58595a; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Analysis&nbsp;" 
+value="&nbsp;Split 2&nbsp;" onclick="navNext1()"/>
+
+    
+</div> 
+
+</div>
+ <!-------------PAGE-1 ------------->
+ <div class="simsubscreen" id="canvas1a" style="visibility: hidden; background: url(images/); overflow: hidden;" ></br>
+
+    <!-------------INPUT AND CALCULATIONS FOR ANALYSIS 2D FRAME-1 part-1------------->
+    
+    <div id="transwhite2" style="width: 800px;  height: 560px; margin-top: -20px;">
+    
+        <br> <br> <br> <br> <br>
+        
+    <body>
+        <img src="images/1.png"  id="addspecimen1" 
+        style="position: absolute;
+            left: 60px;
+            top: 500px;
+            height: 290px;
+            width: 400px;
+            visibility: hidden;
+            "draggable="false"/>
+        <span style="position: absolute; left: 60px; top: 10px; right: 100px; font-size:17px; "><strong>In an infinite potential well, the potential 
+
+            V(x) is zero inside the well and infinite outside, confining the particle strictly within a width 
+            L. And the probability of finding electrons at infinite potential is 0. </strong></span>
+
+        <button id="button50" style="position: absolute; left: 350px; top: 480px; width: 120px; padding-top: 2px; padding-bottom: 2px; background-color: #2150a0; color: #FFF;"onclick="navNext1b()">Start Analysis</button>
+        <span class="blink_me" id="arw1" style="position: absolute;font-size: 30px;left: 315px; top: 474px;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+        
+
+    </div>
+</div>
+<div class="simsubscreen" id="canvas1b" style="visibility: hidden; background: url(images/); overflow: hidden;">
+    <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
+        <br> <br> <br> <br> <br>
+        <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case -1 Visualization of &psi;(x) in an Infinite Potential Well </u></strong></span>
+       
+        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input quantum number n (allowed values n>=0 and n<=6).</p>
+        <input type="text" id="w1" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;">
+    
+        <button id="button1" style="position: absolute; left: 190px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_INF()">Visualize</button>
+        <div class="graph_inf">
+            <div class="image-container">
+                <img src="images/new inf pot.png" alt="Potential Well" class="background-image">
+                <canvas id="myChart"></canvas>
+                <p> solution for different n</p>
+      
+            </div>
+            <p> x-axis : distance</p>
+        <p> y-axis : energy </p>
+        </div>
+
+    </div>
+   
+    <button class="fa fa-hand-o-right" id="nextButton1" style=" background-color: #2150a0; color: #FFF; position:absolute; left: 700px; height: 40px; width: 70px; top: 505px; font-size: 15px; visibility: hidden;" onclick="navNext1c()">Next</button>
+
+</div>
+<div class="simsubscreen" id="canvas3" style="visibility: hidden; width: 800px; margin-right: 50px; margin-left: 5px;">
+    <div id="transis" style="width: 700px; height: auto; margin-right: 2px; margin-left: 1px; padding: 20px;">
+        <!-- First Question -->
+        <p class="incanvas" style="font-size:14px;"><strong>Question 1: What is the nature of particle wave in Region 1 ? </strong></p>
+        <form id="mcqForm3">
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq3" value="A"> A) &psi; =0
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq3" value="B"> B) sinosoid
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq3" value="C"> C) inverted sinosoid
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq3" value="D"> D) exponential decay
+            </label>
+        </form>
+        <!-- Second Question -->
+        <p class="incanvas" style="font-size:14px; margin-top: 30px;"><strong>Question 2:</strong></p>
+        <p class="incanvas" style="font-size:14px;">Which of these is untrue about &psi; at x=0 (boundary of well wall)?</p>
+        <form id="mcqForm4">
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq4" value="A"> A) wave is infinite
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq4" value="B"> B) wave is non-zero
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq4" value="C"> C) solution is continuous for x=0 and x=0+
+            </label>
+            <label style="display: block; margin: 10px 0;">
+                <input type="radio" name="mcq4" value="D"> D) wavefunction is zero.
+            </label>
+        </form>
+        <!-- Submit Button -->
+        <button id="submitButton3" style="margin-top: 20px; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="checkAnswersSecondSet()">Submit</button>
+        <!-- Feedback -->
+        <p id="feedback3" style="font-size:14px; margin-top: 10px; color: green;"></p>
+        <p id="feedback4" style="font-size:14px; margin-top: 10px; color: green;"></p>
+    </div>
+    <span class="blink_me" id="arrowcubox3" style="position:absolute; font-size: 30px; left: 535px; top: 500px; color: #2150a0;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+    <input type="button" id="nextButton3" style="position:absolute; left: 570px; top: 500px; cursor:pointer; font-size: 15px; padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; display: none;" value="&nbsp;Next&nbsp;" onclick="navNext3()"/>
+</div>
+
+<script>
+    function checkAnswersSecondSet() {
+        let allCorrect = true;
+
+        // Check first question in the second set
+        const selectedAnswer3 = document.querySelector('input[name="mcq3"]:checked');
+        const feedback3 = document.getElementById('feedback3');
+
+        if (selectedAnswer3) {
+            if (selectedAnswer3.value === "D") {
+                feedback3.textContent = "Correct!";
+                feedback3.style.color = "green";
+            } else {
+                feedback3.textContent = "Incorrect. Check again.";
+                feedback3.style.color = "red";
+                allCorrect = false;
+            }
+        } else {
+            feedback3.textContent = "Please select an answer for Question 1.";
+            feedback3.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Check second question in the second set
+        const selectedAnswer4 = document.querySelector('input[name="mcq4"]:checked');
+        const feedback4 = document.getElementById('feedback4');
+
+        if (selectedAnswer4) {
+            if (selectedAnswer4.value === "A") {
+                feedback4.textContent = "Correct!";
+                feedback4.style.color = "green";
+            } else {
+                feedback4.textContent = "Incorrect. Check again.";
+                feedback4.style.color = "red";
+                allCorrect = false;
+            }
+        } else {
+            feedback4.textContent = "Please select an answer for Question 2.";
+            feedback4.style.color = "red";
+            allCorrect = false;
+        }
+
+        // Show the "Next" button if all answers are correct
+        const nextButton3 = document.getElementById('nextButton3');
+        if (allCorrect) {
+            nextButton3.style.display = "inline-block"; // Reveal the button
+        } else {
+            nextButton3.style.display = "none"; // Hide the button
+        }
+    }
+</script>
+<!-- JavaScript code to create the chart -->
+<div class="simsubscreen" id="canvas1c" style="visibility: hidden; background: url(images/); overflow: hidden;">
+    <div id="transwhite2" style="width: 800px; height: 600px; margin-top: -20px;">
+        <br> <br> <br> <br> <br>
+        <span style="position: absolute; left: 30px; top: 10px; font-size:17px;"><strong><u>Case - 2 Visualization of &psi;(x) in a finite Potential Well </u></strong></span>
+        <p class="incanvas" id="text1" style="font-size:17px; position: absolute; left: 30px; top: 50px; margin-bottom: 5px;">Input the value of n </p>
+        <input type="text" id="w2" style="position: absolute; left: 30px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Value of n">
+        <!-- <input type="text" id="potential" style="position: absolute; left: 190px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Potential Value">
+        <input type="text" id="length" style="position: absolute; left: 350px; top: 80px; height: 25px; width: 150px; border: 1px solid #000; text-align: center;" placeholder="Length"> -->
+
+        <button id="button1" style="position: absolute; left: 550px; top: 80px; height: 31px; padding: 2px 10px; background-color: #2150a0; color: #FFF;" onclick="Visualize_FN()">Visualize</button>
+        <div class="graph_fn">
+            <div class="image-container2">
+                <img src="images/fn2.png" alt="Potential Well" class="background-image2" id="fn_img">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </div>
+    <img src="images/2.png" id="addspecimen1b" style="position: absolute; left: 20px; top: 100px; height: 250px; width: 340px; visibility: hidden;" draggable="false" />
+    <button class="fa fa-hand-o-right" id="nextButton1" style="background-color: #2150a0; color: #FFF; position:absolute; left: 700px; height: 40px; width: 70px; top: 505px; font-size: 15px; visibility: hidden;" onclick="navNext1c()">Next</button>
+</div>
+
+
+ <!-- //////////////////////////////JAWA SCRIPT END ///////////////////////-->
+</body>
+</html>
